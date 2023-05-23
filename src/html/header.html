@@ -1,0 +1,63 @@
+<header class="header">
+	<div class="container">
+		<div class="header__wrap">
+
+			<div class="header__logo-wrap">
+				<img class="header__logo" src="../img/logo.png" alt="logo">
+				</img>
+			</div>
+
+			<div class="header__menu-wrap">
+				<nav class="header__menu">
+					<ul class="header__menu-list">
+						<li class="header__menu-item"><a href="main.html" class="header__menu-link">Home</a></li>
+						<li class="header__menu-item"><a href="services.html" class="header__menu-link">Services</a></li>
+						<li class="header__menu-item"><a href="blog.html" class="header__menu-link">Blog</a></li>
+						<li class="header__menu-item"><a href="contacts.html" class="header__menu-link">Contacts</a></li>
+					</ul>
+				</nav>
+
+				<div class="header__lang-wrap">
+					<div class="header__lang">
+						<select id="lang">
+							<option id="lang__option" value="/uk/">ENGLISH</option>
+							<option id="lang__option" value="/de/">GERMAN</option>
+							<option id="lang__option" value="/sv/">SWEDISH</option>
+						</select>
+					</div>
+
+					<div class="header__phone">
+						<a href="tel:+13479037485" class="header__phone-link">+1 347 903 74 85</a>
+					</div>
+
+					<div class="header__btn-wrap">
+						<button class="header__btn-logo" id="loginButton" type="submit" name="button">
+							<svg class="header__btn-img">
+								<use xlink:href="../img/icons/icons.svg#login"></use>
+							</svg>
+							Login
+						</button>						
+						<button class="header__btn-logo" id="freeButton">
+							<img class="header__btn-img" src="../img/try.png" alt="button">
+							</img>
+							Try for free
+						</button>
+					</div>
+
+					<div id="loginFormContainer">
+						<form id="loginForm">
+							<label for="username">Логін:</label>
+							<input type="text" id="username" name="username" required>
+
+							<label for="password">Пароль:</label>
+							<input type="password" id="password" name="password" required>
+
+							<input type="submit" value="Увійти">
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
