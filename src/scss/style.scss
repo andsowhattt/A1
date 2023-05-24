@@ -1048,6 +1048,7 @@ h4, .h4 {
 	@media screen and (max-width: 1600px){
 		flex-wrap: wrap;
 		justify-content: center;
+		
 	}
 	
 	.main__contacts-title {
@@ -1205,6 +1206,12 @@ input, textarea {
 	cursor: pointer;
 }
 
+.main__contacts-map iframe {
+	@media (max-width: 836px) {
+		width: 400px;
+		height: 300px;
+	}
+}
 
 
 
