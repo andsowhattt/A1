@@ -1257,6 +1257,9 @@ input, textarea {
 	background-color: var(--accent);
 	border-radius: 4px;
 	border: 1px solid transparent;
+	@media (max-width: 880px) {
+		padding: 4px 12px;
+	}
 }
 .main__home-btn:hover {
 	border: none;
