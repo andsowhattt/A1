@@ -331,6 +331,7 @@ h4, .h4 {
 
 
 	.main__advantages-wrap {
+		margin-top: 15px;
 		.main__advantages-title {
 			margin: 0 auto;
 			text-align: center;
@@ -426,11 +427,19 @@ h4, .h4 {
 		justify-content: center;
 		gap: vw(30);
 		margin-bottom: vh(80);
+		@media screen and (max-width: 768px) {
+			justify-content: space-between;
+			gap: vw(10);
+			margin-bottom: vh(25);
+		}
 		.main__price-item {
 			max-width: vw(319);
 			min-height: 419px;
 			display: flex;
 			flex-direction: column;
+			@media screen and (max-width: 768px) {
+				max-width: none;
+			}
 		}
 		.main__price-title {
 			background-color: #4C97DD;
@@ -466,6 +475,9 @@ h4, .h4 {
 			cursor: pointer;
 			padding-top: vh(16);
 			padding-bottom: vh(16);
+			@media screen and (max-width: 768px) {
+				width: 100%;
+			}
 		}
 		.main__price-service {
 			list-style: none; 
