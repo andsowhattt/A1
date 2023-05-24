@@ -913,7 +913,7 @@ h4, .h4 {
 		height: 20px;
 	}
 	
-	.footer__title {
+	.footer__title-wrap {
 		padding-top: vh(30);
 		padding-bottom: vh(16);
 	}
@@ -1012,6 +1012,9 @@ h4, .h4 {
 			border: none;
 			cursor: pointer;
 			min-width: vw(175);
+			@media screen and (max-width: 800px){
+				padding: 4px 12px;
+			}
 }
 
 .blog__btn:hover {
