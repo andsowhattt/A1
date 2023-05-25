@@ -1,6 +1,7 @@
 @use 'sass:math';
-@import "fonts";
+@import 'fonts';
 @import 'node_modules/swiper/swiper.min';
+
 
 @function vw($px, $screen: 1920) {
 	$inVW: math.div($px, $screen) * 100;
@@ -281,6 +282,7 @@ h4, .h4 {
 		background-color: #45a049;
 	}
 }
+
 
 .main{
 	.main__title-wrap {

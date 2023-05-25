@@ -1,95 +1,12 @@
-import { CountUp } from 'countup.js';
-import Swiper, { Navigation } from 'swiper';
+import { setupAdvantages } from './advantages.js';
+import { setupCounter } from './counter.js';
 
-// FULL DESCRIPTION
+setupAdvantages();
+setupCounter();
 
-const advantagesItems = document.querySelectorAll('.main__advantages-item');
-
-advantagesItems.forEach(item => {
-	const shortDescription = item.querySelector('.short-description');
-	const fullDescription = item.querySelector('.full-description');
-
-	item.addEventListener('mouseover', () => {
-		item.classList.add('active');
-		fullDescription.style.display = 'block';
-		shortDescription.style.display = 'none';
-	});
-
-	item.addEventListener('mouseout', () => {
-		item.classList.remove('active');
-		fullDescription.style.display = 'none';
-		shortDescription.style.display = 'block';
-	});
-});
+import './slider.js';
 
 
-// COUNTER
-
-const numbersSection = document.querySelector('#numbers');
-const numbersElements = [
-	{ id: 'loads', value: 25082, options: { prefix: '+' } },
-	{ id: 'clients', value: 79, options: { prefix: '+' } },
-	{ id: 'clients-net-income', value: 23, options: { prefix: '+', suffix: '%' } },
-	{ id: 'miles-with-cargo', value: 15726920, options: { prefix: '+' } }
-];
-
-const observerOptions = {
-	rootMargin: '0px',
-	threshold: 0.4
-};
-
-const observerCallback = (entries, observer) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			numbersElements.forEach(({ id, value, options }) => {
-				const counter = new CountUp(id, value, options);
-				if (!counter.error) {
-					counter.start();
-				} else {
-					console.error(counter.error);
-				}
-			});
-			observer.unobserve(entry.target);
-		}
-	});
-};
-
-const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-if (numbersSection) {
-	observer.observe(numbersSection);
-}
-
-// SLIDER
-
-Swiper.use([Navigation]);
-
-const swiper = new Swiper('.main__slider', {
-	slidesPerView: 1,
-	spaceBetween: 1,
-	loop: true,
-	speed: 1000,
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	breakpoints: {
-		646: {
-			slidesPerView: 2,
-		},
-		1033: {
-			slidesPerView: 3,
-		},
-		1400: {
-			slidesPerView: 4,
-		},
-	},
-
-});
-
-
-
-// LOGIN, FREE
 const loginButton = document.getElementById('loginButton');
 const logo = document.querySelector('.header__logo-wrap');
 const mainLoginButton = document.querySelector('.main__login-btn');
@@ -184,98 +101,12 @@ if (homeButtons) {
 
 
 // fункція, яка відображає вікно логін форми
-function showLoginForm() {
+import { showLoginForm, handleSignIn, closeLoginForm } from './login.js';
 
-	const formOverlay = document.createElement('div');
-	formOverlay.classList.add('form-overlay');
+handleSignIn();
+closeLoginForm();
 
-	const formContainer = document.createElement('div');
-	formContainer.classList.add('form-container');
 
-	const logoImage = document.createElement('img');
-	logoImage.setAttribute('src', '../img/logo/logo.png');
-	logoImage.classList.add('logo-image');
-
-	const usernameLabel = document.createElement('label');
-	usernameLabel.innerText = 'Username or email address';
-	usernameLabel.classList.add('form-label');
-
-	const usernameInput = document.createElement('input');
-	usernameInput.setAttribute('type', 'text');
-	usernameInput.setAttribute('placeholder', 'Username or email');
-	usernameInput.classList.add('username-input');
-
-	const passwordLabel = document.createElement('label');
-	passwordLabel.innerText = 'Password';
-	passwordLabel.classList.add('form-label');
-
-	const passwordInput = document.createElement('input');
-	passwordInput.setAttribute('type', 'password');
-	passwordInput.setAttribute('placeholder', 'Password');
-	passwordInput.classList.add('password-input');
-
-	const forgotPasswordLink = document.createElement('a');
-	forgotPasswordLink.setAttribute('href', '404.html');
-	forgotPasswordLink.innerText = 'Forgot password?';
-	forgotPasswordLink.classList.add('forgot-password-link');
-
-	const signInButton = document.createElement('button');
-	signInButton.setAttribute('type', 'submit');
-	signInButton.classList.add('sign-in-button');
-	signInButton.innerText = 'Sign in';
-
-	signInButton.addEventListener('click', handleSignIn);
-
-	const signUpText = document.createElement('span');
-	signUpText.innerText = 'New to А1 Tracking? ';
-
-	const signUpLink = document.createElement('a');
-	signUpLink.setAttribute('href', 'free.html#free-login');
-	signUpLink.innerText = 'Create an account';
-	signUpLink.classList.add('sign-up');
-
-	formContainer.appendChild(logoImage);
-	formContainer.appendChild(usernameLabel);
-	formContainer.appendChild(usernameInput);
-	formContainer.appendChild(passwordLabel);
-	formContainer.appendChild(passwordInput);
-	formContainer.appendChild(forgotPasswordLink);
-	formContainer.appendChild(signInButton);
-	formContainer.appendChild(signUpText);
-	formContainer.appendChild(signUpLink);
-
-	formOverlay.appendChild(formContainer);
-
-	document.body.appendChild(formOverlay);
-
-	formOverlay.addEventListener('click', function (event) {
-		if (event.target === formOverlay) {
-			closeLoginForm();
-		}
-	});
-}
-
-function handleSignIn(event) {
-	event.preventDefault();
-
-	const usernameInput = document.querySelector('.username-input');
-	const passwordInput = document.querySelector('.password-input');
-	const username = usernameInput.value;
-	const password = passwordInput.value;
-
-	if (username === 'admin' && password === 'admin') {
-		alert('Login is done.');
-		closeLoginForm();
-	} else {
-		alert('Incorrect username or password.');
-		closeLoginForm();
-	}
-}
-// fункція, яка закриває форму
-function closeLoginForm() {
-	const formOverlay = document.querySelector('.form-overlay');
-	document.body.removeChild(formOverlay);
-}
 
 // EMAIL
 
