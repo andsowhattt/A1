@@ -74,14 +74,19 @@ const swiper = new Swiper('.main__slider', {
 		prevEl: '.swiper-button-prev',
 	},
 	breakpoints: {
-		846: {
+		646: {
 			slidesPerView: 2,
 		},
-		1169: {
-			slidesPerView: 6,
+		1033: {
+			slidesPerView: 3,
+		},
+		1400: {
+			slidesPerView: 4,
 		},
 	},
+	
 });
+
 
 
 // LOGIN, FREE
