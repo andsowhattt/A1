@@ -103,12 +103,6 @@ const partnersButton = document.querySelector('.main__partners-btns');
 const tryFreeButtons = document.querySelectorAll('.main__price-btn');
 const homeButtons = document.querySelectorAll('.main__home-btn');
 
-const firstBtn = document.getElementById('first__blog');
-const secondBtn = document.getElementById('second__blog');
-const thirdBtn = document.getElementById('third__blog');
-const fourthBtn = document.getElementById('fourth__blog');
-const fifthBtn = document.getElementById('fifth__blog');
-const sixthBtn = document.getElementById('sixth__blog');
 
 // Додавання обробника подій для кожної кнопки
 
@@ -199,7 +193,7 @@ function showLoginForm() {
 	formContainer.classList.add('form-container');
 
 	const logoImage = document.createElement('img');
-	logoImage.setAttribute('src', '../img/logo.png');
+	logoImage.setAttribute('src', '../img/logo/logo.png');
 	logoImage.classList.add('logo-image');
 
 	const usernameLabel = document.createElement('label');
