@@ -1356,7 +1356,9 @@ h4, .h4 {
 	transition:all 200ms linear;
 	transform: scale(0.8);
 }
-
+.main__slider-wrapper {
+	align-items: center;
+}
 .slider__logo {
 	width: 20px;
 	height: 20px;
@@ -1364,7 +1366,7 @@ h4, .h4 {
 .swiper-button-prev,
 .swiper-button-next {
 	position: absolute;
-	top: 30%;
+	top: 50%;
 	transform: translateY(-50%);
 	z-index: 10;
 	width: 40px;
