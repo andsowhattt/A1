@@ -111,56 +111,9 @@ const fifthBtn = document.getElementById('fifth__blog');
 const sixthBtn = document.getElementById('sixth__blog');
 
 // Додавання обробника подій для кожної кнопки
-if (firstBtn) {
-	firstBtn.addEventListener('click', redirectedtoFirstBlog)
-}
 
-if (secondBtn) {
-	secondBtn.addEventListener('click', redirectedtoSecondBlog)
-}
-
-if (thirdBtn) {
-	thirdBtn.addEventListener('click', redirectedtoThirdBlog)
-}
-
-if (fourthBtn) {
-	fourthBtn.addEventListener('click', redirectedtoFifthBlog)
-}
-
-if (fifthBtn) {
-	fifthBtn.addEventListener('click', redirectedtoFourthBlog)
-}
-
-if (sixthBtn) {
-	sixthBtn.addEventListener('click', redirectedtoSixthBlog)
-}
 if (logo) {
 	logo.addEventListener('click', redirectedToHomePage)
-}
-
-
-function redirectedtoFirstBlog() {
-	window.location.href = 'blog1.html';
-}
-
-function redirectedtoSecondBlog() {
-	window.location.href = 'blog2.html';
-}
-
-function redirectedtoThirdBlog() {
-	window.location.href = 'blog3.html';
-}
-
-function redirectedtoFifthBlog() {
-	window.location.href = 'blog4.html';
-}
-
-function redirectedtoFourthBlog() {
-	window.location.href = 'blog5.html';
-}
-
-function redirectedtoSixthBlog() {
-	window.location.href = 'blog6.html';
 }
 
 function redirectedToHomePage() {
@@ -190,7 +143,6 @@ if (header) {
 		}
 	});
 }
-
 
 if (mainLoginButton) {
 	mainLoginButton.addEventListener('click', showLoginForm)
