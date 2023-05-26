@@ -174,7 +174,7 @@ h4, .h4 {
 		color: #fc0;
 		transform: scale(1.1);
 	}
-	#lang {
+	.lang {
 		background-color: inherit;
 		border: none;
 		color: var(--accent);
@@ -183,7 +183,7 @@ h4, .h4 {
 	select:active, select:focus{
 		outline:none
 	}
-	#lang__option {
+	.lang__option {
 		background-color: white;
 		color: var(--accent);
 	}
@@ -245,7 +245,7 @@ h4, .h4 {
 			gap: vw(40);
 		}
 	}
-	#loginFormContainer {
+	.loginFormContainer {
 		display: none;
 		position: absolute;
 		top: 50%;
@@ -255,7 +255,7 @@ h4, .h4 {
 		padding: 20px;
 		border-radius: 5px;
 	}
-	#loginFormContainer.show {
+	.loginFormContainer.show {
 		display: block;
 	}
 	label {
