@@ -38,6 +38,7 @@ export function showLoginForm() {
 	signInButton.innerText = 'Sign in';
 
 	signInButton.addEventListener('click', handleSignIn);
+	 
 
 	const signUpText = document.createElement('span');
 	signUpText.innerText = 'New to А1 Tracking? ';

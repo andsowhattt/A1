@@ -1,12 +1,50 @@
-import { setupAdvantages } from './advantages.js';
-import { setupCounter } from './counter.js';
+// LOGIN
 
+// import { showLoginForm, handleSignIn, closeLoginForm } from './login.js';
+// showLoginForm(); 
+// handleSignIn(); 
+// closeLoginForm();
+
+
+// advantages.js
+import { setupAdvantages } from './advantages.js';
 setupAdvantages();
+
+// counter.js
+import { setupCounter } from './counter.js';
 setupCounter();
 
+// slider.js
 import './slider.js';
 
+// email.js
+import { sendMessage, form, nameInput, emailInput, messageInput } from './email.js';
+if (form) {
+form.addEventListener('submit', (event) => {
+event.preventDefault();
+const name = nameInput.value;
+const email = emailInput.value;
+const message = messageInput.value;
+sendMessage(name, email, message);
+});
+}
 
+// freeform.js
+import { formElement, formSubmitHandler } from './freeform.js';
+if (formElement) {
+formElement.addEventListener("submit", formSubmitHandler);
+}
+
+// redirect.js
+import {
+redirectedToHomePage,
+redirectToFreePage,
+redirectToFreeLog,
+redirectToServicesPage,
+redirectTo404Page
+} from './redirect.js';
+
+// event
 const loginButton = document.getElementById('loginButton');
 const logo = document.querySelector('.header__logo-wrap');
 const mainLoginButton = document.querySelector('.main__login-btn');
@@ -20,211 +58,154 @@ const partnersButton = document.querySelector('.main__partners-btns');
 const tryFreeButtons = document.querySelectorAll('.main__price-btn');
 const homeButtons = document.querySelectorAll('.main__home-btn');
 
-
-// Додавання обробника подій для кожної кнопки
-
+// event listeners
 if (logo) {
-	logo.addEventListener('click', redirectedToHomePage)
-}
-
-function redirectedToHomePage() {
-	window.location.href = 'main.html';
-}
-
-function redirectToFreePage() {
-	window.location.href = 'free.html';
-}
-
-function redirectToFreeLog() {
-	window.location.href = 'free.html#free-login';
-}
-
-function redirectToServicesPage() {
-	window.location.href = 'services.html';
-}
-
-function redirectTo404Page() {
-	window.location.href = '404.html';
+logo.addEventListener('click', redirectedToHomePage);
 }
 
 if (header) {
-	header.addEventListener('click', function (event) {
-		if (event.target.id === 'freeButton' || event.target.classList.contains('main__free-btn')) {
-			redirectToFreePage();
+header.addEventListener('click', (event) => {
+if (event.target.id === 'freeButton' || event.target.classList.contains('main__free-btn')) {
+redirectToFreePage();
+}
+});
+}
+
+if (mainLoginButton) {
+mainLoginButton.addEventListener('click', showLoginForm);
+}
+
+if (loginButton) {
+loginButton.addEventListener('click', showLoginForm);
+}
+
+if (freeButton) {
+freeButton.addEventListener('click', redirectToFreePage);
+}
+
+if (mainFreeButton) {
+mainFreeButton.addEventListener('click', redirectToFreePage);
+}
+
+if (viewServices) {
+viewServices.addEventListener('click', redirectToServicesPage);
+}
+
+if (mainNumberFree) {
+mainNumberFree.addEventListener('click', redirectToFreePage);
+}
+
+if (freeAnimation) {
+freeAnimation.addEventListener('click', redirectToFreePage);
+}
+
+if (partnersButton) {
+partnersButton.addEventListener('click', redirectTo404Page);
+}
+
+if (tryFreeButtons) {
+tryFreeButtons.forEach((button) => {
+button.addEventListener('click', redirectToFreeLog);
+});
+}
+
+if (homeButtons) {
+homeButtons.forEach((button) => {
+button.addEventListener('click', redirectedToHomePage);
+});
+}
+
+
+// LOGIN
+function showLoginForm() {
+	const formOverlay = document.createElement('div');
+	formOverlay.classList.add('form-overlay');
+
+	const formContainer = document.createElement('div');
+	formContainer.classList.add('form-container');
+
+	const logoImage = document.createElement('img');
+	logoImage.setAttribute('src', '../img/logo/logo.png');
+	logoImage.classList.add('logo-image');
+
+	const usernameLabel = document.createElement('label');
+	usernameLabel.innerText = 'Username or email address';
+	usernameLabel.classList.add('form-label');
+
+	const usernameInput = document.createElement('input');
+	usernameInput.setAttribute('type', 'text');
+	usernameInput.setAttribute('placeholder', 'Username or email');
+	usernameInput.classList.add('username-input');
+
+	const passwordLabel = document.createElement('label');
+	passwordLabel.innerText = 'Password';
+	passwordLabel.classList.add('form-label');
+
+	const passwordInput = document.createElement('input');
+	passwordInput.setAttribute('type', 'password');
+	passwordInput.setAttribute('placeholder', 'Password');
+	passwordInput.classList.add('password-input');
+
+	const forgotPasswordLink = document.createElement('a');
+	forgotPasswordLink.setAttribute('href', '404.html');
+	forgotPasswordLink.innerText = 'Forgot password?';
+	forgotPasswordLink.classList.add('forgot-password-link');
+
+	const signInButton = document.createElement('button');
+	signInButton.setAttribute('type', 'submit');
+	signInButton.classList.add('sign-in-button');
+	signInButton.innerText = 'Sign in';
+
+	signInButton.addEventListener('click', handleSignIn);
+	 
+
+	const signUpText = document.createElement('span');
+	signUpText.innerText = 'New to А1 Tracking? ';
+
+	const signUpLink = document.createElement('a');
+	signUpLink.setAttribute('href', 'free.html#free-login');
+	signUpLink.innerText = 'Create an account';
+	signUpLink.classList.add('sign-up');
+
+	formContainer.appendChild(logoImage);
+	formContainer.appendChild(usernameLabel);
+	formContainer.appendChild(usernameInput);
+	formContainer.appendChild(passwordLabel);
+	formContainer.appendChild(passwordInput);
+	formContainer.appendChild(forgotPasswordLink);
+	formContainer.appendChild(signInButton);
+	formContainer.appendChild(signUpText);
+	formContainer.appendChild(signUpLink);
+
+	formOverlay.appendChild(formContainer);
+
+	document.body.appendChild(formOverlay);
+
+	formOverlay.addEventListener('click', function (event) {
+		if (event.target === formOverlay) {
+			closeLoginForm();
 		}
 	});
 }
 
-if (mainLoginButton) {
-	mainLoginButton.addEventListener('click', showLoginForm)
+function handleSignIn(event) {
+	event.preventDefault();
+
+	const usernameInput = document.querySelector('.username-input');
+	const passwordInput = document.querySelector('.password-input');
+	const username = usernameInput.value;
+	const password = passwordInput.value;
+
+	if (username === 'admin' && password === 'admin') {
+		alert('Login is done.');
+		closeLoginForm();
+	} else {
+		alert('Incorrect username or password.');
+		closeLoginForm();
+	}
 }
 
-if (loginButton) {
-	loginButton.addEventListener('click', showLoginForm)
+function closeLoginForm() {
+	const formOverlay = document.querySelector('.form-overlay');
+	document.body.removeChild(formOverlay);
 }
-
-if (freeButton) {
-	freeButton.addEventListener('click', redirectToFreePage);
-}
-
-if (mainFreeButton) {
-	mainFreeButton.addEventListener('click', redirectToFreePage);
-}
-
-if (viewServices) {
-	viewServices.addEventListener('click', redirectToServicesPage);
-}
-
-if (mainNumberFree) {
-	mainNumberFree.addEventListener('click', redirectToFreePage);
-}
-
-if (freeAnimation) {
-	freeAnimation.addEventListener('click', redirectToFreePage);
-}
-
-if (partnersButton) {
-	partnersButton.addEventListener('click', redirectTo404Page);
-}
-
-if (tryFreeButtons) {
-	tryFreeButtons.forEach(button => {
-		button.addEventListener('click', redirectToFreeLog);
-	});
-}
-
-if (homeButtons) {
-	homeButtons.forEach(button => {
-		button.addEventListener('click', redirectedToHomePage);
-	});
-}
-
-
-// fункція, яка відображає вікно логін форми
-import { showLoginForm, handleSignIn, closeLoginForm } from './login.js';
-
-handleSignIn();
-closeLoginForm();
-
-
-
-// EMAIL
-
-const form = document.getElementById('contacts__sms-form');
-const nameInput = document.getElementById('contacts__sms-name');
-const emailInput = document.getElementById('contacts__sms-email');
-const messageInput = document.getElementById('contacts__sms-message');
-
-// Перевірка наявності форми
-if (form) {
-
-	form.addEventListener('submit', (event) => {
-		event.preventDefault();
-
-
-		const name = nameInput.value;
-		const email = emailInput.value;
-		const message = messageInput.value;
-
-
-		sendMessage(name, email, message);
-	});
-}
-
-function sendMessage(name, email, message) {
-	const data = {
-		name: name,
-		email: email,
-		message: message
-	};
-
-	fetch('https://jsonplaceholder.typicode.com/posts', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify(data)
-	})
-		.then(response => {
-			if (!response.ok) {
-				throw new Error('Error: ' + response.status);
-			}
-			return response.json();
-		})
-		.then(data => {
-			// Обробка успішної відправки повідомлення
-			console.log('Message sent successfully:', data);
-
-			nameInput.value = '';
-			emailInput.value = '';
-			messageInput.value = '';
-
-			alert(JSON.stringify(data));
-			alert('Message sent successfully');
-		})
-		.catch(error => {
-			// Обробка помилки відправки повідомлення
-			console.error('Error:', error);
-		});
-}
-
-// FREE FORM
-
-const formElement = document.getElementById("main__free-form");
-if (formElement) {
-	formElement.addEventListener("submit", function (event) {
-		event.preventDefault();
-
-		const name = document.getElementById("main__free-name").value;
-		const email = document.getElementById("main__free-email").value;
-		const phone = document.getElementById("main__free-phone").value;
-		const companyName = document.getElementById("main__free-company-name").value;
-		const companyMCdot = document.getElementById("main__free-company-mc-dot").value;
-		const message = document.getElementById("main__free-message").value;
-
-		const formData = {
-			name,
-			email,
-			phone,
-			companyName,
-			companyMCdot,
-			message
-		};
-
-		// Відправляємо дані форми на сервер
-		fetch("https://jsonplaceholder.typicode.com/posts", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json"
-			},
-			body: JSON.stringify(formData)
-		})
-			.then(function (response) {
-				if (response.ok) {
-					return response.json();
-				} else {
-					throw new Error("An error occurred while submitting the form.");
-				}
-			})
-			.then(function (data) {
-				// Обробка успішного результату
-				console.log("Server response:", data);
-				alert(JSON.stringify(formData));
-
-				document.getElementById("main__free-name").value = "";
-				document.getElementById("main__free-email").value = "";
-				document.getElementById("main__free-phone").value = "";
-				document.getElementById("main__free-company-name").value = "";
-				document.getElementById("main__free-company-mc-dot").value = "";
-				document.getElementById("main__free-message").value = "";
-
-				window.location.href = "thx.html";
-			})
-			.catch(function (error) {
-				// Обробка помилки
-				console.error("Error:", error);
-			});
-	});
-}
-
-
