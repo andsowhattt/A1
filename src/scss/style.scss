@@ -1,6 +1,7 @@
 @use 'sass:math';
 @import 'fonts';
 @import 'node_modules/swiper/swiper.min';
+@import 'keyframes';
 
 
 @function vw($px, $screen: 1920) {
@@ -391,21 +392,6 @@ h4, .h4 {
 				display: none;
 			}
 		} 
-		@keyframes pulse {
-			0% {
-				transform: scale(1);
-				box-shadow: 0 0 0 0 rgba(25, 104, 179, 0.7);
-			}
-			70% {
-				transform: scale(1.2);
-				box-shadow: 0 0 0 30px rgba(25, 104, 179, 0);
-			}
-			100% {
-				transform: scale(1);
-				box-shadow: 0 0 0 0 rgba(25, 104, 179, 0);
-			}
-		}
-		
 	}
 
 	.main__services-wrap {
