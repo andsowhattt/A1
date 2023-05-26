@@ -1,0 +1,55 @@
+.main__cars-wrap {
+	margin-top: vh(60);
+	@media screen and (max-width: 1753px) {
+		margin-top: vh(52);
+	}
+	.main__cars {
+		text-align: center;
+		padding-bottom: vh(28);
+	}
+	.main__cars-block {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		@media screen and (max-width: 1169px) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+		}
+		@media screen and (max-width: 924px) {
+			
+				grid-template-columns: 1fr;
+				grid-template-rows: repeat(6, 1fr);
+			
+		}
+	}
+	.main__cars-item {
+		min-width: vw(620);
+		min-height: vh(329);
+		border: 2px solid #DFDFDF;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.main__cars-img {
+		min-width: vw(386);
+		height: auto;
+		object-fit: cover;
+	}
+	.small{
+		padding-right: vw(100);
+		padding-top: vh(40);
+	}
+	.main__car-item {
+		display: flex;
+		justify-content: space-between;
+	}
+	.main__cars-model {
+		padding-left: vw(20);
+		padding-top: vh(20);
+	}
+	.main__cars-text {
+		padding-top: vh(20);
+		padding-left: vw(20);
+		padding-bottom: vh(20);
+	}
+}

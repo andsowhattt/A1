@@ -1,0 +1,105 @@
+.main__title-wrap {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	@media screen and (max-width: 583px){
+		flex-wrap: wrap;
+	}
+	.main__title-img {
+		width: 1080px;
+			height: 1080px;
+		@media screen and (max-width: 1550px){
+			width: 790px;
+			height: 790px;
+		}
+			@media screen and (max-width: 1169px){
+				width: 490px;
+				height: 490px;
+			}
+			@media screen and (max-width: 855px){
+				width: 290px;
+				height: 290px;
+			}
+			@media screen and (max-width: 583px){
+				width: 100%;
+				height: auto;
+			}
+	}
+	.main__title-text {
+		margin-right: 10px;
+		padding-top: vh(213);
+		max-width: vw(701);
+		@media screen and (max-width: 1550px){
+			padding-top: vh(13);
+		}
+		@media screen and (max-width: 855px){
+		max-width: none;
+		text-align: center;
+		}
+	}
+	.main__title {
+		padding-bottom: vh(12);
+	}
+	.main__title-small {
+		padding-bottom: vh(21);
+	}
+	.main__title-btn {
+		margin-bottom: vh(350);
+		background-color: inherit;
+		color: white;
+		border: 1px solid var(--accent);
+		display: flex;
+		align-items: center;
+		padding: 8px 24px;
+		gap: 5px;
+		cursor: pointer;
+		border-radius: 4px;
+		background-color: var(--accent);
+		@media screen and (max-width: 1550px){
+			margin-bottom: vh(50);
+		}
+		@media screen and (max-width: 855px){
+			padding: 4px 12px;
+			margin-bottom: vh(10);
+		}
+	}
+	.main__title-btn:hover {
+		border: none;
+		border: 1px solid transparent;
+		box-shadow: 0 0 35px var(--accent);
+		transform: scale(1.1);
+	}
+	.main__title-btn-logo {
+		width: 20px;
+		height: 20px;
+	}
+	.title-btn-wrap {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 15px;
+		@media screen and (max-width: 855px){
+			justify-content: center;
+		}
+	}
+	.main__btn-free {
+		position: absolute;
+		right: 50px;
+		bottom: 210px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: #fc0;
+		border-radius: 50%;
+		animation: pulse 2s linear infinite;
+		padding: 15px;
+		cursor: pointer;
+		background-color: var(--accent);
+		@media screen and (max-width: 1550px){
+			bottom: 10px;
+		}
+		@media screen and (max-width: 1200px){
+			display: none;
+		}
+	} 
+}

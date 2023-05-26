@@ -1,0 +1,118 @@
+.header {
+	background-color: white;
+	color: var(--accent);
+	padding-top: vh(13);
+	padding-bottom: vh(13);
+	.header__logo-wrap:hover {
+		cursor: pointer;
+	}
+	.header__logo {
+		@media screen and (max-width: 1100px){
+			width: vw(340);
+			height: auto;
+		}
+		@media screen and (max-width: 855px){
+			width: 150px;
+			height: auto;
+		}
+		@media screen and (max-width: 485px){
+			width: 120px;
+			height: auto;
+		}
+		@media screen and (max-width: 390px){
+			width: 100px;
+			height: auto;
+		}
+	}
+	.header__wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.header__menu-list {
+		display: flex;
+		gap: vw(60);
+	}
+	.header__menu-link {
+		@media screen and (max-width: 485px){
+			font-size: 14px;
+		}
+	}
+	.header__menu-item:hover {
+		cursor: pointer;
+		color: #fc0;
+		transform: scale(1.1);
+	}
+	.lang {
+		background-color: inherit;
+		border: none;
+		color: var(--accent);
+		text-align: center;
+	}
+	select:active, select:focus{
+		outline:none
+	}
+	.lang__option {
+		background-color: white;
+		color: var(--accent);
+	}
+	.header__lang {
+		@media screen and (max-width: 1300px){
+			display: none;
+		}
+	}
+	.header__phone {
+		@media screen and (max-width: 1300px){
+			display: none;
+		}
+	}
+	.header__lang-wrap {
+		display: flex;
+		align-items: center;
+		gap: vw(20);
+	}
+	.header__btn-img {
+		width: 20px;
+		height: 20px;
+	}
+	.header__btn-wrap {
+		display: flex;
+		gap: 15px;
+		@media screen and (max-width: 880px){
+			display: none;
+		}
+	}
+	.header__btn-logo {
+		display: flex;
+		gap: 5px;
+		align-items: center;
+		cursor: pointer;
+		border-radius: 4px;
+	}
+	.header__btn-logo:hover {
+		border: 1px solid transparent;
+		box-shadow: 0 0 35px var(--accent);
+		transform: scale(1.1);
+	}
+	.header__btn-logo, .header__btn {
+		border: 1px solid var(--accent);
+		color: white;
+		padding: 8px 24px;
+		background-color: var(--accent);
+		@media screen and (max-width: 1100px){
+			padding: 4px 12px;
+		}
+	}
+	.header__menu-wrap {
+		display: flex;
+		align-items: center;
+		gap: vw(440);
+		@media screen and (max-width: 1605px){
+			gap: vw(140);
+		}
+		@media screen and (max-width: 1300px){
+			gap: vw(40);
+		}
+	}
+	
+}
