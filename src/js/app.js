@@ -35,41 +35,10 @@ if (formElement) {
 	formElement.addEventListener("submit", formSubmitHandler);
 }
 
-// redirect.js
-import {
-	redirectedToHomePage,
-	redirectToFreePage,
-	redirectToFreeLog,
-	redirectToServicesPage,
-	redirectTo404Page
-} from './redirect.js';
-
 // event
 const loginButton = document.getElementById('loginButton');
-const logo = document.querySelector('.header__logo-wrap');
 const mainLoginButton = document.querySelector('.main__login-btn');
-const freeButton = document.getElementById('freeButton');
-const mainFreeButton = document.querySelector('.main__free-btn');
-const freeAnimation = document.querySelector('.main__btn-free');
-const viewServices = document.querySelector('.main__services-btn');
-const mainNumberFree = document.querySelector('.main__number-btn');
-const header = document.querySelector('header');
-const partnersButton = document.querySelector('.main__partners-btns');
-const tryFreeButtons = document.querySelectorAll('.main__price-btn');
-const homeButtons = document.querySelectorAll('.main__home-btn');
 
-// event listeners
-if (logo) {
-	logo.addEventListener('click', redirectedToHomePage);
-}
-
-if (header) {
-	header.addEventListener('click', (event) => {
-		if (event.target.id === 'freeButton' || event.target.classList.contains('main__free-btn')) {
-			redirectToFreePage();
-		}
-	});
-}
 
 if (mainLoginButton) {
 	mainLoginButton.addEventListener('click', showLoginForm);
@@ -78,43 +47,6 @@ if (mainLoginButton) {
 if (loginButton) {
 	loginButton.addEventListener('click', showLoginForm);
 }
-
-if (freeButton) {
-	freeButton.addEventListener('click', redirectToFreePage);
-}
-
-if (mainFreeButton) {
-	mainFreeButton.addEventListener('click', redirectToFreePage);
-}
-
-if (viewServices) {
-	viewServices.addEventListener('click', redirectToServicesPage);
-}
-
-if (mainNumberFree) {
-	mainNumberFree.addEventListener('click', redirectToFreePage);
-}
-
-if (freeAnimation) {
-	freeAnimation.addEventListener('click', redirectToFreePage);
-}
-
-if (partnersButton) {
-	partnersButton.addEventListener('click', redirectTo404Page);
-}
-
-if (tryFreeButtons) {
-	tryFreeButtons.forEach((button) => {
-		button.addEventListener('click', redirectToFreeLog);
-	});
-}
-
-if (homeButtons) {
-	homeButtons.forEach((button) => {
-		button.addEventListener('click', redirectedToHomePage);
-	});
-}
-
 
 // LOGIN
 function showLoginForm() {
