@@ -1,11 +1,3 @@
-// LOGIN
-
-// import { showLoginForm, handleSignIn, closeLoginForm } from './login.js';
-// showLoginForm(); 
-// handleSignIn(); 
-// closeLoginForm();
-
-
 // advantages.js
 import { setupAdvantages } from './advantages.js';
 setupAdvantages();
@@ -34,6 +26,15 @@ import { formElement, formSubmitHandler } from './freeform.js';
 if (formElement) {
 	formElement.addEventListener("submit", formSubmitHandler);
 }
+
+
+// LOGIN
+
+// import { showLoginForm, handleSignIn, closeLoginForm } from './login.js';
+// showLoginForm();
+// handleSignIn();
+// closeLoginForm();
+
 
 // event
 const loginButton = document.getElementById('loginButton');

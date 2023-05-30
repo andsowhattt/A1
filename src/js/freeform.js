@@ -2,7 +2,7 @@ export const formElement = document.getElementById("main__free-form");
 
 export const formSubmitHandler = function (event) {
 	event.preventDefault();
-
+	const formElement = document.getElementById("main__free-form");
 	const name = document.getElementById("main__free-name").value;
 	const email = document.getElementById("main__free-email").value;
 	const phone = document.getElementById("main__free-phone").value;
@@ -32,25 +32,20 @@ export const formSubmitHandler = function (event) {
 				return response.json();
 			} else {
 				throw new Error("An error occurred while submitting the form.");
-				}
+			}
 		})
 		.then(function (data) {
-			// Обробка успішного результату
+			
 			console.log("Server response:", data);
 			alert(JSON.stringify(formData));
 
-			document.getElementById("main__free-name").value = "";
-			document.getElementById("main__free-email").value = "";
-			document.getElementById("main__free-phone").value = "";
-			document.getElementById("main__free-company-name").value = "";
-			document.getElementById("main__free-company-mc-dot").value = "";
-			document.getElementById("main__free-message").value = "";
+			
+			formElement.reset();
 
 			window.location.href = "thx.html";
 		})
 		.catch(function (error) {
-			// Обробка помилки
+			
 			console.error("Error:", error);
 		});
 };
-

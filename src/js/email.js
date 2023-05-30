@@ -1,4 +1,5 @@
 export function sendMessage() {
+	const form = document.getElementById('contacts__sms-form');
 	const nameInput = document.getElementById('contacts__sms-name');
 	const emailInput = document.getElementById('contacts__sms-email');
 	const messageInput = document.getElementById('contacts__sms-message');
@@ -25,9 +26,7 @@ export function sendMessage() {
 		.then(data => {
 			console.log('Message sent successfully:', data);
 
-			nameInput.value = '';
-			emailInput.value = '';
-			messageInput.value = '';
+			form.reset();
 
 			const formDataObject = {
 				name,
