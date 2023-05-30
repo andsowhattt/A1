@@ -1,9 +1,12 @@
-export const form = document.getElementById('contacts__sms-form');
-export const nameInput = document.getElementById('contacts__sms-name');
-export const emailInput = document.getElementById('contacts__sms-email');
-export const messageInput = document.getElementById('contacts__sms-message');
+export function sendMessage() {
+	const nameInput = document.getElementById('contacts__sms-name');
+	const emailInput = document.getElementById('contacts__sms-email');
+	const messageInput = document.getElementById('contacts__sms-message');
 
-export function sendMessage(name, email, message) {
+	const name = nameInput.value;
+	const email = emailInput.value;
+	const message = messageInput.value;
+
 	const formData = new FormData();
 	formData.append('name', name);
 	formData.append('email', email);

@@ -18,15 +18,14 @@ setupCounter();
 import './slider.js';
 
 // email.js
-import { sendMessage, form, nameInput, emailInput, messageInput } from './email.js';
+import { sendMessage } from './email.js';
+const form = document.getElementById('contacts__sms-form');
 
 if (form) {
 	form.addEventListener('submit', (event) => {
 		event.preventDefault();
-		const name = nameInput.value;
-		const email = emailInput.value;
-		const message = messageInput.value;
-		sendMessage(name, email, message);
+		
+		sendMessage();
 	});
 }
 
