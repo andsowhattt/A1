@@ -19,29 +19,30 @@ import './slider.js';
 
 // email.js
 import { sendMessage, form, nameInput, emailInput, messageInput } from './email.js';
+
 if (form) {
-form.addEventListener('submit', (event) => {
-event.preventDefault();
-const name = nameInput.value;
-const email = emailInput.value;
-const message = messageInput.value;
-sendMessage(name, email, message);
-});
+	form.addEventListener('submit', (event) => {
+		event.preventDefault();
+		const name = nameInput.value;
+		const email = emailInput.value;
+		const message = messageInput.value;
+		sendMessage(name, email, message);
+	});
 }
 
 // freeform.js
 import { formElement, formSubmitHandler } from './freeform.js';
 if (formElement) {
-formElement.addEventListener("submit", formSubmitHandler);
+	formElement.addEventListener("submit", formSubmitHandler);
 }
 
 // redirect.js
 import {
-redirectedToHomePage,
-redirectToFreePage,
-redirectToFreeLog,
-redirectToServicesPage,
-redirectTo404Page
+	redirectedToHomePage,
+	redirectToFreePage,
+	redirectToFreeLog,
+	redirectToServicesPage,
+	redirectTo404Page
 } from './redirect.js';
 
 // event
@@ -60,59 +61,59 @@ const homeButtons = document.querySelectorAll('.main__home-btn');
 
 // event listeners
 if (logo) {
-logo.addEventListener('click', redirectedToHomePage);
+	logo.addEventListener('click', redirectedToHomePage);
 }
 
 if (header) {
-header.addEventListener('click', (event) => {
-if (event.target.id === 'freeButton' || event.target.classList.contains('main__free-btn')) {
-redirectToFreePage();
-}
-});
+	header.addEventListener('click', (event) => {
+		if (event.target.id === 'freeButton' || event.target.classList.contains('main__free-btn')) {
+			redirectToFreePage();
+		}
+	});
 }
 
 if (mainLoginButton) {
-mainLoginButton.addEventListener('click', showLoginForm);
+	mainLoginButton.addEventListener('click', showLoginForm);
 }
 
 if (loginButton) {
-loginButton.addEventListener('click', showLoginForm);
+	loginButton.addEventListener('click', showLoginForm);
 }
 
 if (freeButton) {
-freeButton.addEventListener('click', redirectToFreePage);
+	freeButton.addEventListener('click', redirectToFreePage);
 }
 
 if (mainFreeButton) {
-mainFreeButton.addEventListener('click', redirectToFreePage);
+	mainFreeButton.addEventListener('click', redirectToFreePage);
 }
 
 if (viewServices) {
-viewServices.addEventListener('click', redirectToServicesPage);
+	viewServices.addEventListener('click', redirectToServicesPage);
 }
 
 if (mainNumberFree) {
-mainNumberFree.addEventListener('click', redirectToFreePage);
+	mainNumberFree.addEventListener('click', redirectToFreePage);
 }
 
 if (freeAnimation) {
-freeAnimation.addEventListener('click', redirectToFreePage);
+	freeAnimation.addEventListener('click', redirectToFreePage);
 }
 
 if (partnersButton) {
-partnersButton.addEventListener('click', redirectTo404Page);
+	partnersButton.addEventListener('click', redirectTo404Page);
 }
 
 if (tryFreeButtons) {
-tryFreeButtons.forEach((button) => {
-button.addEventListener('click', redirectToFreeLog);
-});
+	tryFreeButtons.forEach((button) => {
+		button.addEventListener('click', redirectToFreeLog);
+	});
 }
 
 if (homeButtons) {
-homeButtons.forEach((button) => {
-button.addEventListener('click', redirectedToHomePage);
-});
+	homeButtons.forEach((button) => {
+		button.addEventListener('click', redirectedToHomePage);
+	});
 }
 
 
@@ -157,7 +158,7 @@ function showLoginForm() {
 	signInButton.innerText = 'Sign in';
 
 	signInButton.addEventListener('click', handleSignIn);
-	 
+
 
 	const signUpText = document.createElement('span');
 	signUpText.innerText = 'New to А1 Tracking? ';
