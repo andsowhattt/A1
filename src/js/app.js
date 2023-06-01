@@ -30,11 +30,12 @@ if (formElement) {
 
 // LOGIN
 
-const loginButton = document.getElementById('loginButton');
-const loginForm = document.querySelector('.loginFormContainer');
-const loginOverlay = document.querySelector('.login-overlay');
+
+const loginForm = document.querySelector('.login__form-container');
+const loginOverlay = document.querySelector('.login__overlay');
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
+const loginButton = document.getElementById('loginButton');
 
 function openModal() {
 	loginForm.style.display = 'block'; 
@@ -68,4 +69,3 @@ document.addEventListener('click', function (event) {
 	}
 });
 loginForm.addEventListener('submit', login);
-
