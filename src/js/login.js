@@ -3,6 +3,7 @@ const loginOverlay = document.querySelector('.login__overlay');
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
 const loginButton = document.getElementById('loginButton');
+const mainLoginButton = document.querySelector('.main__login-btn');
 
 export function openModal() {
 	loginForm.style.display = 'block';
@@ -22,6 +23,7 @@ function login(event) {
 
 	if (username === 'admin' && password === 'admin') {
 		alert('Login is done.');
+		closeModal(); 
 	} else {
 		alert('Incorrect username or password.');
 	}
@@ -30,9 +32,10 @@ function login(event) {
 }
 
 loginButton.addEventListener('click', openModal);
+mainLoginButton.addEventListener('click', openModal);
 document.addEventListener('click', function (event) {
 	if (!loginForm.contains(event.target) && !loginButton.contains(event.target)) {
 		closeModal();
 	}
 });
-loginForm.addEventListener('click', login);
+loginForm.addEventListener('submit', login);

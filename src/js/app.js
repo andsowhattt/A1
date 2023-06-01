@@ -1,3 +1,15 @@
+// LOGIN
+import { openModal } from './login.js';
+
+if (openModal) {
+	const loginButton = document.getElementById('loginButton');
+	const mainLoginButton = document.querySelector('.main__login-btn');
+
+	loginButton.addEventListener('click', openModal);
+	mainLoginButton.addEventListener('click', openModal);
+}
+
+
 // advantages.js
 import { setupAdvantages } from './advantages.js';
 setupAdvantages();
@@ -26,9 +38,3 @@ import { formElement, formSubmitHandler } from './freeform.js';
 if (formElement) {
 	formElement.addEventListener("submit", formSubmitHandler);
 }
-
-// LOGIN
-import { openModal } from './login.js';
-
-const loginButton = document.getElementById('loginButton');
-loginButton.addEventListener('click', openModal);
