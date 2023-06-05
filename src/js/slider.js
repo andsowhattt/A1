@@ -15,10 +15,10 @@ const swiper = new Swiper('.main__slider', {
 		646: {
 			slidesPerView: 2,
 		},
-		1033: {
+		1169: {
 			slidesPerView: 3,
 		},
-		1400: {
+		1553: {
 			slidesPerView: 4,
 		},
 	},

@@ -3,7 +3,7 @@
 	justify-content: center;
 	gap: vw(30);
 	margin-bottom: vh(80);
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 880px) {
 		justify-content: space-between;
 		gap: vw(10);
 		margin-bottom: vh(25);
@@ -13,7 +13,7 @@
 		min-height: 419px;
 		display: flex;
 		flex-direction: column;
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 880px) {
 			max-width: none;
 		}
 	}
@@ -52,7 +52,7 @@
 		padding-top: vh(16);
 		padding-bottom: vh(16);
 		text-align: center;
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 880px) {
 			width: 100%;
 		}
 	}

@@ -2,13 +2,13 @@
 	position: relative;
 	display: flex;
 	justify-content: space-between;
-	@media screen and (max-width: 583px){
+	@media screen and (max-width: 646px){
 		flex-wrap: wrap;
 	}
 	.main__title-img {
 		width: 1080px;
 			height: 1080px;
-		@media screen and (max-width: 1550px){
+		@media screen and (max-width: 1553px){
 			width: 790px;
 			height: 790px;
 		}
@@ -16,11 +16,11 @@
 				width: 490px;
 				height: 490px;
 			}
-			@media screen and (max-width: 855px){
+			@media screen and (max-width: 880px){
 				width: 290px;
 				height: 290px;
 			}
-			@media screen and (max-width: 583px){
+			@media screen and (max-width: 646px){
 				width: 100%;
 				height: auto;
 			}
@@ -29,10 +29,10 @@
 		margin-right: 10px;
 		padding-top: vh(213);
 		max-width: vw(701);
-		@media screen and (max-width: 1550px){
+		@media screen and (max-width: 1553px){
 			padding-top: vh(13);
 		}
-		@media screen and (max-width: 855px){
+		@media screen and (max-width: 880px){
 		max-width: none;
 		text-align: center;
 		}
@@ -55,10 +55,10 @@
 		cursor: pointer;
 		border-radius: 4px;
 		background-color: var(--accent);
-		@media screen and (max-width: 1550px){
+		@media screen and (max-width: 1553px){
 			margin-bottom: vh(50);
 		}
-		@media screen and (max-width: 855px){
+		@media screen and (max-width: 880px){
 			padding: 4px 12px;
 			margin-bottom: vh(10);
 		}
@@ -78,7 +78,7 @@
 		flex-direction: row;
 		align-items: center;
 		gap: 15px;
-		@media screen and (max-width: 855px){
+		@media screen and (max-width: 880px){
 			justify-content: center;
 		}
 	}
@@ -95,10 +95,10 @@
 		padding: 15px;
 		cursor: pointer;
 		background-color: var(--accent);
-		@media screen and (max-width: 1550px){
+		@media screen and (max-width: 1553px){
 			bottom: 10px;
 		}
-		@media screen and (max-width: 1200px){
+		@media screen and (max-width: 1169px){
 			display: none;
 		}
 	} 

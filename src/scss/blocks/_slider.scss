@@ -26,6 +26,12 @@
 	width: 20px;
 	height: 20px;
 }
+.swiper-img {
+	@media screen and (max-width: 646px){
+		max-width: 100px;
+		height: auto;
+	}
+}
 .swiper-button-prev,
 .swiper-button-next {
 	position: absolute;
@@ -38,6 +44,10 @@
 	border-radius: 50%;
 	border: none;
 	cursor: pointer;
+	@media screen and (max-width: 646px){
+		width: 20px;
+		height: 20px;
+	}
 }
 .swiper-button-prev {
 	left: 5px;

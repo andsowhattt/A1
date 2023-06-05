@@ -4,7 +4,7 @@
 		padding-top: vh(60);
 		padding-bottom: vh(62);
 		z-index: 1;
-		@media screen and (max-width: 1605px){
+		@media screen and (max-width: 1696px){
 			padding-top: vh(15);
 			margin: 10px;
 			padding-bottom: vh(20);
@@ -24,17 +24,17 @@
 	.main__services-bg {
 		position: absolute;
 		right: 0;
-		top: -190px;
+		top: -150px;
 		z-index: -1;
 		@media screen and (max-width: 1169px){
 			display: none;
 		}
 	}
 	.services__bg {
-		@media screen and (max-width: 1755px){
+		@media screen and (max-width: 1696px){
 			padding-top: vh(35);
 		}
-		@media screen and (max-width: 1655px){
+		@media screen and (max-width: 1696px){
 			width: vw(1080);
 			height: auto;
 			padding-top: 105px;
