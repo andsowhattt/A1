@@ -11,6 +11,9 @@
 ul li {
 	list-style: none;
 }
+select:active, select:focus{
+	outline:none
+}
 
 img {
 	display: block;

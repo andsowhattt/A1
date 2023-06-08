@@ -26,7 +26,7 @@ function checkScreenWidth(menuList, menuToggle, menuClose) {
 export function initializeBurgerMenu() {
 	const menuToggle = document.querySelector('.header__menu-toggle');
 	const menuClose = document.querySelector('.header__menu-close');
-	const menuList = document.querySelector('.header__menu-list');
+	const menuList = document.querySelector('.menu__list');
 
 	if (menuToggle && menuClose && menuList) {
 		menuToggle.addEventListener('click', () => {
