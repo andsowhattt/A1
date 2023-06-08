@@ -1,10 +1,15 @@
-@import 'fonts';
 @import 'node_modules/swiper/swiper.min';
 
-@import 'keyframe/keyframes';
+@import 'fonts';
+
 @import 'default/functions';
-@import 'default/normalize';
 @import 'default/root';
+
+@import 'default/normalize';
+
+@import 'keyframe/keyframes';
+
+
 @import 'blocks/title';
 @import 'blocks/slider';
 @import 'blocks/login';

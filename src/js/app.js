@@ -1,40 +1,27 @@
 // burger
-import { initializeBurgerMenu } from './burger.js';
+import { initializeBurgerMenu } from './modules/burger.js';
 
 document.addEventListener('DOMContentLoaded', function () {
 	initializeBurgerMenu();
 });
 
 // login
-import { openModal } from './login.js';
-
-const loginButton = document.getElementById('loginButton');
-const mainLoginButton = document.querySelector('.main__login-btn');
-
-if (loginButton) {
-	loginButton.addEventListener('click', openModal);
-}
-
-if (mainLoginButton) {
-	mainLoginButton.addEventListener('click', openModal);
-}
-
-
+import './modules/login.js';
 
 
 // advantages
-import { setupAdvantages } from './advantages.js';
+import { setupAdvantages } from './modules/advantages.js';
 setupAdvantages();
 
 // counter
-import { setupCounter } from './counter.js';
+import { setupCounter } from './modules/counter.js';
 setupCounter();
 
 // slider
-import './slider.js';
+import './modules/slider.js';
 
 // email
-import { sendMessage } from './email.js';
+import { sendMessage } from './modules/email.js';
 const form = document.getElementById('contacts__sms-form');
 
 if (form) {
@@ -46,7 +33,7 @@ if (form) {
 }
 
 // freeform
-import { formElement, formSubmitHandler } from './freeform.js';
+import { formElement, formSubmitHandler } from './modules/freeform.js';
 if (formElement) {
 	formElement.addEventListener("submit", formSubmitHandler);
 }

@@ -93,7 +93,8 @@
 }
 .slider-img {
 	width: 100%;
-	height: vh(200);
+	height: 200px;
+	object-fit: cover;
 }
 .blog__slider-title {
 	margin-bottom: 10px;

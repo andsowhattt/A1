@@ -1,17 +1,6 @@
 export function sendMessage() {
 	const form = document.getElementById('contacts__sms-form');
-	const nameInput = document.getElementById('contacts__sms-name');
-	const emailInput = document.getElementById('contacts__sms-email');
-	const messageInput = document.getElementById('contacts__sms-message');
-
-	const name = nameInput.value;
-	const email = emailInput.value;
-	const message = messageInput.value;
-
-	const formData = new FormData();
-	formData.append('name', name);
-	formData.append('email', email);
-	formData.append('message', message);
+	const formData = new FormData(form);
 
 	fetch('https://jsonplaceholder.typicode.com/posts', {
 		method: 'POST',
@@ -25,14 +14,9 @@ export function sendMessage() {
 		})
 		.then(data => {
 			console.log('Message sent successfully:', data);
-
 			form.reset();
 
-			const formDataObject = {
-				name,
-				email,
-				message,
-			};
+			const formDataObject = Object.fromEntries(formData.entries());
 
 			alert(JSON.stringify(formDataObject));
 			alert('Message sent successfully');
@@ -40,4 +24,4 @@ export function sendMessage() {
 		.catch(error => {
 			console.error('Error:', error);
 		});
-}
+}	 
