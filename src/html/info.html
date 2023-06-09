@@ -1,0 +1,92 @@
+<div class="main__contacts-wrap">
+
+	<div class="main__contacts-map">
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1515.2142207109057!2d-73.96504856107919!3d40.57629743010107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24440e71c589d%3A0x1cba58440ec120b4!2zMzEwNSBCcmlnaHRvbiAzcmQgU3QsIEJyb29rbHluLCBOWSAxMTIzNSwg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1suk!2sua!4v1684155559320!5m2!1suk!2sua"
+			width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+
+	<div class="main__contacts">
+		<h2 class="main__contacts-title h1">
+			Our <span class="accent h1">Contacts</span>
+		</h2>
+
+		<div class="main__contacts-list">
+			<div class="main__contacts-item">
+				<img class="main__contacts-logo" src="./img/contacts/location.png" alt="image"></img>
+				<a class="main__contact"
+					href="mailto:general@a1truckingsolutions.com">general@a1truckingsolutions.com</a>
+			</div>
+			<div class="main__contacts-item">
+				<img class="main__contacts-logo" src="./img/contacts/tel.png" alt="image"></img>
+				<a class="main__contact" href="tel:+13479037485">+1 347 903 74 85</a>
+			</div>
+			<div class="main__contacts-item">
+				<img class="main__contacts-logo" src="./img/contacts/home.png" alt="image"></img>
+				<a class="main__contact"
+					href="https://www.google.com/maps/search/?api=1&query=3105+Brighton+3rd+St+Brooklyn,+NY+11235"
+					target="_blank">3105 Brighton 3rd St Brooklyn, NY 11235</a>
+			</div>
+		</div>
+
+		<div class="main__contacts-qr">
+			<h3 class="contacts__title">Contact us now
+				or save our contact information</h3>
+			<p class="contacts__info">
+				Use your phone camera:
+			</p>
+			<img src="./img/contacts/qr.png" alt="qr" class="contacts__img">
+		</div>
+
+		<div class="main__contacts-social">
+			<a href="https://www.facebook.com">
+				<svg class="main__contact-logo">
+					<use xlink:href="../img/icons/icons.svg#fb"></use>
+				</svg>
+			</a>
+			<a href="https://twitter.com">
+				<svg class="main__contact-logo">
+					<use xlink:href="../img/icons/icons.svg#tw"></use>
+				</svg>
+			</a>
+			<a href="https://www.instagram.com/">
+				<svg class="main__contact-logo">
+					<use xlink:href="../img/icons/icons.svg#inst"></use>
+				</svg>
+			</a>
+			<a href="https://www.linkedin.com/">
+				<svg class="main__contact-logo">
+					<use xlink:href="../img/icons/icons.svg#link"></use>
+				</svg>
+			</a>
+		</div>
+	</div>
+
+	<div class="main__contacts-sms">
+		<p class="contacts__sms-title h2">Drop us <span class="accent h2">a line</span></p>
+		<form id="contacts__sms-form">
+			<div class="sms__form-item">
+				<label for="name">Your Name</label>
+				<input type="text" id="contacts__sms-name" name="name" required>
+			</div>
+
+			<div class="sms__form-item">
+				<label for="email">Your Email</label>
+				<input type="email" id="contacts__sms-email" name="email" required>
+			</div>
+
+			<div class="sms__form-item">
+				<label for="message">Your Message</label>
+				<textarea id="contacts__sms-message" name="contacts__sms-message" placeholder="Type here..." required></textarea>
+			</div>
+
+			<button class="sms__form-btn" type="submit" id="contacts__sms-submit">Send Message
+				<svg class="sms__submit-logo">
+					<use xlink:href="../img/icons/icons.svg#sms"></use>
+				</svg>
+			</button>
+		</form>
+		<p class="contacts__sms-security">* We do not transfer your data to third parties.</p>
+	</div>
+</div>
