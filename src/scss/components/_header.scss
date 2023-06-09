@@ -7,7 +7,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		.header__logo-wrap {
+		.logo{
 			&:hover {
 				cursor: pointer;
 			}
@@ -33,7 +33,7 @@
 			@media screen and (max-width: 1169px){
 				gap: vw(40);
 			}
-			.header__menu {
+			.menu {
 				.menu__list {
 					display: flex;
 					gap: vw(60);
@@ -80,7 +80,7 @@
 				max-width: 30px;
 				max-height: 30px;
 			}
-			.header__menu-bar {
+			.bar {
 				display: flex;
 				align-items: center;
 				gap: vw(20);
