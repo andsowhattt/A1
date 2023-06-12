@@ -1,65 +1,80 @@
-h1, .h1{
-	font-family: 'JosefinSans';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 65px;
-	line-height: 80px;
-	color: var(--accent);
-	@media screen and (max-width: 1169px){
-		font-size: 48px;
-	}
-	@media screen and (max-width: 880px){
-		font-size: 36px;
-	}
+.title {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
 	@media screen and (max-width: 646px){
-	font-family: 'JosefinSans';
-	font-weight: 400;
-	line-height: 60px;
-	font-weight: bold;
+		flex-wrap: wrap;
 	}
-}
-
-h2, .h2{
-	font-family: 'JosefinSans';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 50px;
-	line-height: 60px;
-	@media screen and (max-width: 1169px){
-		font-size: 32px;
+	.title__img {
+		width: 1080px;
+			height: 1080px;
+		@media screen and (max-width: 1553px){
+			width: 790px;
+			height: 790px;
+		}
+			@media screen and (max-width: 1169px){
+				width: 490px;
+				height: 490px;
+			}
+			@media screen and (max-width: 880px){
+				width: 290px;
+				height: 290px;
+			}
+			@media screen and (max-width: 646px){
+				width: 100%;
+				height: auto;
+			}
 	}
-}
-
-h3, .h3{
-	font-family: 'Poppins';
-	font-style: normal;
-	font-weight: 500;
-	font-size: 25px;
-	line-height: 35px;
-	@media screen and (max-width: 1169px){
-		font-size: 16px;
+	.title__text {
+		margin-right: 10px;
+		padding-top: vh(213);
+		max-width: vw(701);
+		@media screen and (max-width: 1553px){
+			padding-top: vh(13);
+		}
+		@media screen and (max-width: 880px){
+		max-width: none;
+		text-align: center;
+		}
 	}
-}
-
-h4, .h4 {
-	font-family: 'Poppins';
-	font-style: normal;
-	font-weight: 300;
-	font-size: 18px;
-	line-height: 30px;
-}
-
-.josef__accent {
-	font-family: 'JosefinSans';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 75px;
-	line-height: 85px;
-	color: var(--accent);
-	@media screen and (max-width: 1696px){
-		font-size: 48px;
+	.title__title {
+		padding-bottom: vh(12);
 	}
-	@media screen and (max-width: 1169px){
-		font-size: 36px;
+	.title__subtitle {
+		padding-bottom: vh(21);
 	}
+	.title__btn {
+		@media screen and (max-width: 1553px){
+			margin-bottom: vh(50);
+		}
+		@media screen and (max-width: 880px){
+			padding: 4px 12px;
+			margin-bottom: vh(10);
+		}
+	}
+	.title__btns {
+		@media screen and (max-width: 880px){
+			justify-content: center;
+		}
+	}
+	.title__btn-free {
+		position: absolute;
+		right: 50px;
+		bottom: 210px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: #fc0;
+		border-radius: 50%;
+		animation: pulse 2s linear infinite;
+		padding: 15px;
+		cursor: pointer;
+		background-color: var(--accent);
+		@media screen and (max-width: 1553px){
+			bottom: 10px;
+		}
+		@media screen and (max-width: 1169px){
+			display: none;
+		}
+	} 
 }
