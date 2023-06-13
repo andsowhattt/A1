@@ -1,13 +1,13 @@
-.main__cars-wrap {
+.cars {
 	margin-top: vh(60);
 	@media screen and (max-width: 1696px) {
 		margin-top: vh(52);
 	}
-	.main__cars {
+	.cars__title-wrap {
 		text-align: center;
 		padding-bottom: vh(28);
 	}
-	.main__cars-block {
+	.cars__model-wrap {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(2, 1fr);
@@ -22,7 +22,7 @@
 			
 		}
 	}
-	.main__cars-item {
+	.cars__model {
 		min-width: vw(620);
 		min-height: vh(329);
 		border: 2px solid #DFDFDF;
@@ -30,24 +30,24 @@
 		flex-direction: column;
 		justify-content: space-between;
 	}
-	.main__cars-img {
-		min-width: vw(386);
-		height: auto;
-		object-fit: cover;
-	}
-	.small{
-		padding-right: vw(100);
-		padding-top: vh(40);
-	}
-	.main__car-item {
+	.cars__model-item {
 		display: flex;
 		justify-content: space-between;
 	}
-	.main__cars-model {
+	.cars__model-name {
 		padding-left: vw(20);
 		padding-top: vh(20);
 	}
-	.main__cars-text {
+	.cars__model-img {
+		min-width: vw(386);
+		height: auto;
+		object-fit: cover;
+		&--small {
+			padding-right: vw(100);
+			padding-top: vh(40);
+		}
+	}
+	.cars__model-info {
 		padding-top: vh(20);
 		padding-left: vw(20);
 		padding-bottom: vh(20);
