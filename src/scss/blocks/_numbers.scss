@@ -1,5 +1,5 @@
-.main__numbers-wrap {
-	.main__numbers {
+.numbers {
+	.numbers__title-wrap {
 		text-align: center;
 		margin-top: vh(60);
 		margin-bottom: vh(120);
@@ -8,10 +8,10 @@
 			margin-top: vh(25);
 	}
 	}
-	.main__numbers-title {
+	.numbers__title {
 		padding-bottom: vh(10);
 	}
-	.main__number-info {
+	.numbers__info-wrap {
 		display: flex;
 		gap: vw(221);
 		@media screen and (max-width: 1169px) {
@@ -21,7 +21,7 @@
 			width: 100%;
 	}
 	}
-	.main__number-item {
+	.numbers__info {
 		max-width: vw(724);
 		padding-bottom: vh(212);
 		position: relative;
@@ -31,66 +31,13 @@
 			margin: 10px;
 	}
 	}
-	.main__number-bg {
-		position: absolute;
-		width: 100%;
-		height: auto;
-		top: -150px;
-		right: 35px;
-		z-index: -1;
-		@media screen and (max-width: 1169px) {
-			top: -10px;
-	}
-	}
-	.main__number-plus {
-		display: flex;
-		flex-direction: column;
-		gap: vh(54);
-		@media screen and (max-width: 1169px) {
-			gap: vh(0);
-		}
-	}
-	.main__number-btn {
-		display: flex;
-		gap: 5px;
-		align-items: center;
-		cursor: pointer;
-		border-radius: 4px;
-		background-color: var(--accent);
-		border: none;
-		color: white;
-		padding: 8px 24px;
-		max-width: fit-content;
-	}
-	.main__number-btn:hover {
-		box-shadow: 0 0 35px var(--accent);
-		transform: scale(1.1);
-	}
-	.number__btn-img {
-		width: 20px;
-		height: 20px;
-	}
-	.main__number-subtitle {
+	.numbers__info-title {
 		padding-bottom: vh(15);
 		@media screen and (max-width: 1169px) {
 			text-align: center;
 		}
 	}
-	.main__number-p {
+	.numbers__info-text {
 		padding-bottom: vh(15);
-	}
-	.main__number {
-		display: flex;
-		min-width: vw(720);
-		justify-content: space-between;
-		@media screen and (max-width: 1169px) {
-			flex-direction: column;
-	}
-	}
-	.main__number-stat {
-		max-width: vw(268);
-		@media screen and (max-width: 1169px) {
-			max-width: none;
-	}
 	}
 }

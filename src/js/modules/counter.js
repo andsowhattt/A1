@@ -1,7 +1,7 @@
 import { CountUp } from 'countup.js';
 
 export function setupCounter() {
-	const numbersSection = document.querySelector('#numbers');
+	const numbersSection = document.getElementById('numbers');
 	const numbersElements = [
 		{ id: 'loads', value: 25082, options: { prefix: '+' } },
 		{ id: 'clients', value: 79, options: { prefix: '+' } },

@@ -1,0 +1,35 @@
+.counter {
+	.counter__wrap {
+		display: flex;
+		min-width: vw(720);
+		justify-content: space-between;
+		@media screen and (max-width: 1169px) {
+			flex-direction: column;
+	}
+	}
+	.counter__plus {
+		display: flex;
+		flex-direction: column;
+		gap: vh(54);
+		@media screen and (max-width: 1169px) {
+			gap: vh(0);
+		}
+	}
+	.counter__plus-title {
+		max-width: vw(268);
+		@media screen and (max-width: 1169px) {
+			max-width: none;
+	}
+	}
+	.counter__bg {
+		position: absolute;
+		width: 100%;
+		height: auto;
+		top: -150px;
+		right: 35px;
+		z-index: -1;
+		@media screen and (max-width: 1169px) {
+			top: -10px;
+	}
+	}
+}
