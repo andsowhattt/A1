@@ -1,5 +1,5 @@
 export function setupAdvantages() {
-	const advantagesItems = document.querySelectorAll('.main__advantages-item');
+	const advantagesItems = document.querySelectorAll('.advantages__block-item');
 
 	advantagesItems.forEach(item => {
 		const shortDescription = item.querySelector('.short-description');
