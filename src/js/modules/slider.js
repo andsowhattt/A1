@@ -2,7 +2,7 @@ import Swiper, { Navigation } from 'swiper';
 
 Swiper.use([Navigation]);
 
-const swiper = new Swiper('.main__slider', {
+const swiper = new Swiper('.slider--js', {
 	slidesPerView: 1,
 	spaceBetween: 1,
 	loop: true,

@@ -1,13 +1,13 @@
-.main__partners-wrap {
+.partners {
 	text-align: center;
 	margin-bottom: vh(40);
-	.main__partners-title {
+	.partners__title {
 		padding-bottom: vh(10);
 	}
-	.main__partners-text {
+	.partners__subtitle {
 		padding-bottom: vh(40);
 	}
-	.main__partners-btns {
+	.partners__btn-wrap {
 		display: flex;
 		gap: vw(30);
 		justify-content: center;
@@ -18,16 +18,16 @@
 			grid-template-rows: repeat(2, 1fr);
 		}
 	}
-	.main__partners-btn {
+	.partners__btn {
 		padding: 10px 50px;
 		border: none;
 		background-color: white;
-	}
-	.main__partners-btn:hover {
-		background-color: #1968B3;
-		color: white;
-		border-radius: 4px;
-		box-shadow: 0 0 35px var(--accent);
-		cursor: pointer;
+		&:hover {
+			background-color: #1968B3;
+			color: white;
+			border-radius: 4px;
+			box-shadow: 0 0 35px var(--accent);
+			cursor: pointer;
+		}
 	}
 }
