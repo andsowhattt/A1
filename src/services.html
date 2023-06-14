@@ -6,18 +6,27 @@
 
 <body>
 	@@include('html/header.html',{})
-	<main>
-		<div class="main">
+	<div class="service">
+		<div class="service__advantages-wrap">
 			@@include('html/advantages.html',{})
+		</div>
+		<div class="service__start-wrap">
 			@@include('html/start.html',{})
+		</div>
+		<div class="service__price-wrap">
 			@@include('html/price.html',{})
+		</div>
+		<div class="service__numbers-wrap">
 			@@include('html/numbers.html',{})
+		</div>
+		<div class="service__partners-wrap">
 			@@include('html/partners.html',{})
+		</div>
+		<div class="service__slider-wrap">
 			@@include('html/slider.html',{})
 		</div>
-	</main>
+	</div>
 	@@include('html/footer.html',{})
 	@@include('html/login.html',{})
 	<script src="js/app.min.js" type="module"></script>
-
 </body>

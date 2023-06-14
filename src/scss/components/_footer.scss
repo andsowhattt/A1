@@ -5,10 +5,6 @@
 	.footer-wrap {
 		text-align: center;
 	}
-	.footer__logo {
-		width: 20px;
-		height: 20px;
-	}
 	.footer__title-wrap {
 		padding-top: vh(30);
 		padding-bottom: vh(16);
@@ -25,14 +21,7 @@
 		display: flex;
 		justify-content: center;
 	}
-	.footer__policy {
-		text-decoration: underline;
-	}
-	.footer__policy-q {
-		padding-bottom: vh(30);
-		padding-top: vh(16);
-	}
-	.circle {
+	.footer__social-circle {
 		width: 36px;
 		height: 36px;
 		border-radius: 50%;
@@ -41,5 +30,16 @@
 		justify-content: center;
 		align-items: center;
 		margin: 5px;
+	}
+	.footer__social-logo {
+		width: 20px;
+		height: 20px;
+	}
+	.footer__policy {
+		text-decoration: underline;
+	}
+	.footer__policy-q {
+		padding-bottom: vh(30);
+		padding-top: vh(16);
 	}
 }
