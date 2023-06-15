@@ -6,14 +6,16 @@
 
 <body>
 	@@include('html/header.html',{})
-	<main>
-		<div class="main__error-wrap">
-			<img src="./img/404/404.png" alt="error" class="main__error-img">
-			<a class="main__home-btn" href="main.html">
-				Go To Homepage
-			</a>
+	<div class="addition__page-wrap">
+		<div class="addition__page">
+			<img src="./img/404/404.png" alt="error" class="addition__page-img">
+			<div class="addition__page-btn btn__wrap">
+				<a class="btn btn--margin-center" href="main.html">
+					Go To Homepage
+				</a>
+			</div>
 		</div>
-	</main>
+	</div>
 	@@include('html/footer.html',{})
 	@@include('html/login.html',{})
 	<script src="js/app.min.js" type="module"></script>
