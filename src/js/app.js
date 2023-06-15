@@ -33,7 +33,7 @@ if (form) {
 }
 
 // freeform
-import { formElement, formSubmitHandler } from './modules/freeform.js';
+import { formElement, formSubmitHandler } from './modules/trial.js';
 if (formElement) {
 	formElement.addEventListener("submit", formSubmitHandler);
 }

@@ -1,14 +1,14 @@
-export const formElement = document.getElementById("main__free-form");
+export const formElement = document.getElementById("trial__form-block");
 
 export const formSubmitHandler = function (event) {
 	event.preventDefault();
-	const formElement = document.getElementById("main__free-form");
-	const name = document.getElementById("main__free-name").value;
-	const email = document.getElementById("main__free-email").value;
-	const phone = document.getElementById("main__free-phone").value;
-	const companyName = document.getElementById("main__free-company-name").value;
-	const companyMCdot = document.getElementById("main__free-company-mc-dot").value;
-	const message = document.getElementById("main__free-message").value;
+	const formElement = document.getElementById("trial__form-block");
+	const name = document.getElementById("trial__form-name").value;
+	const email = document.getElementById("trial__form-email").value;
+	const phone = document.getElementById("trial__form-phone").value;
+	const companyName = document.getElementById("trial__form-company").value;
+	const companyMCdot = document.getElementById("trial__form-mc").value;
+	const message = document.getElementById("trial__form-message").value;
 
 	const formData = {
 		name,

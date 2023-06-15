@@ -6,10 +6,17 @@
 
 <body>
 	@@include('html/header.html',{})
-	<main>
-		@@include('html/trial.html',{})
-		@@include('html/start.html',{})
-	</main>
+	<div class="trial__wrap">
+		<div class="trial__title-wrap">
+			@@include('html/trial.html',{})
+		</div>
+		<div class="trial__form-wrap">
+			@@include('html/trial_form.html',{})
+		</div>
+		<div class="trial__start">
+			@@include('html/start.html',{})
+		</div>
+	</div>
 	@@include('html/footer.html',{})
 	@@include('html/login.html',{})
 	<script src="js/app.min.js" type="module"></script>
