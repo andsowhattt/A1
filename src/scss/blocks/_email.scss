@@ -1,0 +1,14 @@
+.email {
+	&__title {
+		margin-top: vh(25);
+	}
+	&__form-item {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		padding-bottom: vh(15);
+	}
+	&__security {
+		margin-top: vh(10);
+	}
+}

@@ -1,4 +1,4 @@
-.main__contacts-wrap {
+.contacts {
 	display: flex;
 	gap: 30px;
 	align-items: center;
@@ -9,10 +9,17 @@
 	@media screen and (max-width: 1696px){
 		flex-wrap: wrap;
 		justify-content: center;
-		
 	}
-	
-	.main__contacts-title {
+	@media (max-width: 880px) {
+		margin: 10px;
+	}
+	.contacts__map iframe {
+		@media (max-width: 880px) {
+			width: 300px;
+			height: 200px;
+		}
+	}
+	.contacts__info-title {
 		color: black;
 		margin-bottom: vh(30);
 		@media screen and (max-width: 1696px){
@@ -20,80 +27,42 @@
 			
 		}
 	}
-	.main__contacts-social {
+	.contacts__info-list {
+		margin-bottom: vh(40);
+	}
+	.contacts__info-item {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+	}
+	.contacts__info-logo {
+		width: 20px;
+		height: 20px;
+	}
+
+	
+	.contacts__info-link {
+		@media (max-width: 880px) {
+			font-size: 16px;
+		}
+	}
+	.contacts__info {
+		margin-bottom: vh(10);
+		@media (max-width: 880px) {
+			text-align: center;
+		}
+	}
+	.contacts__info-qr {
+		@media (max-width: 880px) {
+			margin: 0 auto;
+		}
+	}
+	.contacts__info-social {
 		display: flex;
 		gap: 24px;
 		align-items: center;
 		@media (max-width: 880px) {
 			justify-content: center;
 		}
-	}
-	.main__contact-logo {
-		width: 20px;
-		height: 20px;
-	}
-	.main__contacts-logo {
-		width: 20px;
-		height: 20px;
-	}
-	.main__contacts-item {
-		display: flex;
-		gap: 8px;
-		align-items: center;
-	}
-	.main__contacts-list {
-		margin-bottom: vh(40);
-	}
-	.main__contacts-qr {
-		margin-bottom: vh(10);
-		@media (max-width: 880px) {
-			text-align: center;
-		}
-	}
-	.contacts__img {
-		@media (max-width: 880px) {
-			margin: 0 auto;
-		}
-	}
-	.contacts__info {
-		padding-bottom: vh(10);
-	}
-	.sms__submit-logo {
-		width: 16px;
-		height: 14px;
-	}
-	.sms__form-item {
-		display: flex;
-		flex-direction: column;
-		gap: 15px;
-		padding-bottom: vh(15);
-	}
-	.sms__form-btn {
-		margin-bottom: vh(10);
-		padding: 8px 24px;
-		display: flex;
-		gap: 10px;
-		align-items: center;
-		color: white;
-		border: none;
-		background-color: var(--accent);
-		border-radius: 4px;
-		border: 1px solid transparent;
-	}
-	.sms__form-btn:hover {
-		border: none;
-		border: 1px solid transparent;
-		box-shadow: 0 0 35px var(--accent);
-		transform: scale(1.1);
-		cursor: pointer;
-	}
-	.contacts__sms-title {
-		margin-bottom: vh(25);
-	}
-}
-.main__contacts-map iframe {
-	@media (max-width: 880px) {
-		width: 400px;
-		height: 300px;
 	}
 }

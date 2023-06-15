@@ -1,5 +1,5 @@
 export function sendMessage() {
-	const form = document.getElementById('contacts__sms-form');
+	const form = document.getElementById('email__sms-form');
 	const formData = new FormData(form);
 
 	fetch('https://jsonplaceholder.typicode.com/posts', {

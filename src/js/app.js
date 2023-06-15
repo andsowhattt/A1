@@ -22,7 +22,7 @@ import './modules/slider.js';
 
 // email
 import { sendMessage } from './modules/email.js';
-const form = document.getElementById('contacts__sms-form');
+const form = document.getElementById('email__sms-form');
 
 if (form) {
 	form.addEventListener('submit', (event) => {

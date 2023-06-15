@@ -6,10 +6,14 @@
 
 <body>
 	@@include('html/header.html',{})
-	<main>
-		@@include('html/blog_post.html',{})
-		@@include('html/blog_slider.html',{})
-	</main>
+	<div class="blog__wrapper">
+		<div class="blog__post-wrap">
+			@@include('html/blog_post.html',{})
+		</div>
+		<div class="blog__slider-wrap">
+			@@include('html/blog_slider.html',{})
+		</div>
+	</div>
 	@@include('html/footer.html',{})
 	@@include('html/login.html',{})
 	<script src="js/app.min.js" type="module"></script>

@@ -1,0 +1,8 @@
+.blog__post {
+	max-width: vw(915);
+	margin: 0 auto;
+	@media (max-width: 880px) {
+		margin: 10px;
+		max-width: 100%;
+	}
+}
