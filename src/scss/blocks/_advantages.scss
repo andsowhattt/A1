@@ -22,68 +22,67 @@
 		@media screen and (max-width: 1169px) {
 			margin-top: 5vh; 
 		}
-	}
-	.advantages__block-bg {
-		height: 100%;
-		width: vw(1514);
-		background-image: url('../img/advantages/adv.jpg');
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: left -705px;
-		@media screen and (max-width: 1553px) {
-			display: none;
+		&-bg {
+			height: 100%;
+			width: vw(1514);
+			background-image: url('../img/advantages/adv.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: left -705px;
+			@media screen and (max-width: 1553px) {
+				display: none;
+			}
 		}
-	}
-	.advantages__block-list {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		// position: relative; 
-		@media screen and (max-width: 1696px) {
-			grid-template-columns: 1fr 1fr; 
-			grid-template-rows: repeat(3, 1fr);
+		&-list {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			// position: relative; 
+			@media screen and (max-width: 1696px) {
+				grid-template-columns: 1fr 1fr; 
+				grid-template-rows: repeat(3, 1fr);
+			}
+			@media screen and (max-width: 1169px) {
+				grid-template-columns: 1fr; 
+				grid-template-rows: repeat(6, 1fr);
+			}
 		}
-		@media screen and (max-width: 1169px) {
-			grid-template-columns: 1fr; 
-			grid-template-rows: repeat(6, 1fr);
+		&-item {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
+			box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5);
+			max-width: vw(357);
+			max-height: vh(474);
+			background-color: white;
+			padding-bottom: vh(30);
+			transition: outline-color 0.2s ease;
+			position: relative;
+			@media screen and (max-width: 1696px) {
+				min-width: 100%;
+				min-height: auto;
+				padding-bottom: 10vh; 
+			}
+			@media screen and (max-width: 880px) {
+				padding-bottom: 10vh;
+			}
 		}
-	}
-	.advantages__block-item {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		align-items: center;
-		box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5);
-		max-width: vw(357);
-		max-height: vh(474);
-		background-color: white;
-		padding-bottom: vh(30);
-		transition: outline-color 0.2s ease;
-		position: relative;
-		@media screen and (max-width: 1696px) {
-			min-width: 100%;
-			min-height: auto;
-			padding-bottom: 10vh; 
+		&-item.active {
+			background: linear-gradient(222.21deg, #1968B3 -106.3%, #4C97DD 73.07%);
+			color: white;
+			transform: scale(1.1);
+			box-shadow: 0 0 35px var(--accent);
+			z-index: 1;
 		}
-		@media screen and (max-width: 880px) {
-			padding-bottom: 10vh;
+		// &-item:before {
+		// 	content: "";
+		// 	position: absolute;
+		// }
+		&-logo {
+			max-width: 100%;
+			height: auto;
+			padding-top: vh(253);
 		}
-	}
-	
-	// .advantages__block-item:before {
-	// 	content: "";
-	// 	position: absolute;
-	// }
-	.advantages__block-item.active {
-		background: linear-gradient(222.21deg, #1968B3 -106.3%, #4C97DD 73.07%);
-		color: white;
-		transform: scale(1.1);
-		box-shadow: 0 0 35px var(--accent);
-		z-index: 1;
-	}
-	.advantages__block-logo {
-		max-width: 100%;
-		height: auto;
-		padding-top: vh(253);
 	}
 }

@@ -29,27 +29,27 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-	}
-	.cars__model-item {
-		display: flex;
-		justify-content: space-between;
-	}
-	.cars__model-name {
-		padding-left: vw(20);
-		padding-top: vh(20);
-	}
-	.cars__model-img {
-		min-width: vw(386);
-		height: auto;
-		object-fit: cover;
-		&--small {
-			padding-right: vw(100);
-			padding-top: vh(40);
+		&-item {
+			display: flex;
+			justify-content: space-between;
 		}
-	}
-	.cars__model-info {
-		padding-top: vh(20);
-		padding-left: vw(20);
-		padding-bottom: vh(20);
+		&-name {
+			padding-left: vw(20);
+			padding-top: vh(20);
+		}
+		&-img {
+			min-width: vw(386);
+			height: auto;
+			object-fit: cover;
+			&--small {
+				padding-right: vw(100);
+				padding-top: vh(40);
+			}
+		}
+		&-info {
+			padding-top: vh(20);
+			padding-left: vw(20);
+			padding-bottom: vh(20);
+		}
 	}
 }

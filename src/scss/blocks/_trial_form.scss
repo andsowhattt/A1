@@ -8,12 +8,12 @@
 		gap: vh(15);
 		margin: 10px;
 	}
-	.trial__form-title {
+	&-title {
 		@media (max-width: 880px) {
 			text-align: center;
 		}
 	}
-	.trial__form-input {
+	&-input {
 		display: flex;
 		flex-direction: column;
 		gap: vh(15);

@@ -14,12 +14,12 @@
 		@media screen and (max-width: 1169px) {
 			gap: vh(0);
 		}
-	}
-	.counter__plus-title {
-		max-width: vw(268);
-		@media screen and (max-width: 1169px) {
-			max-width: none;
-	}
+		&-title {
+			max-width: vw(268);
+			@media screen and (max-width: 1169px) {
+				max-width: none;
+			}
+		}
 	}
 	.counter__bg {
 		position: absolute;

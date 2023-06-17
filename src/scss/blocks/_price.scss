@@ -41,23 +41,22 @@
 		padding-top: vh(12);
 		padding-bottom: vh(12);
 		color: #465577;
-	}
-	.price__list-service {
-		list-style: none; 
-		position: relative; 
-		padding-left: 20px; 
-		
-	}
-	.price__list-service::before {
-		content: ""; 
-		position: absolute; 
-		left: 10px; 
-		top: 50%; 
-		transform: translate(-50%, -50%); 
-		width: 6px; 
-		height: 6px; 
-		background-color: #1968B3; 
-		border-radius: 50%; 
+		&-service {
+			list-style: none; 
+			position: relative; 
+			padding-left: 20px; 
+		}
+		&-service::before {
+			content: ""; 
+			position: absolute; 
+			left: 10px; 
+			top: 50%; 
+			transform: translate(-50%, -50%); 
+			width: 6px; 
+			height: 6px; 
+			background-color: #1968B3; 
+			border-radius: 50%; 
+		}
 	}
 	.price__btn {
 		background-color: #1968B3;

@@ -2,7 +2,7 @@
 	background-image: url(../img/footer/footer.png);
 	background-size: cover;
 	color: white;
-	.footer-wrap {
+	&-wrap {
 		text-align: center;
 	}
 	.footer__title-wrap {
@@ -20,26 +20,27 @@
 		margin-bottom: vh(16);
 		display: flex;
 		justify-content: center;
+		&-circle {
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			background-color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 5px;
+		}
+		&-logo {
+			width: 20px;
+			height: 20px;
+		}
 	}
-	.footer__social-circle {
-		width: 36px;
-		height: 36px;
-		border-radius: 50%;
-		background-color: white;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: 5px;
-	}
-	.footer__social-logo {
-		width: 20px;
-		height: 20px;
-	}
+	
 	.footer__policy {
 		text-decoration: underline;
-	}
-	.footer__policy-q {
-		padding-bottom: vh(30);
-		padding-top: vh(16);
+		&-q {
+			padding-bottom: vh(30);
+			padding-top: vh(16);
+		}
 	}
 }

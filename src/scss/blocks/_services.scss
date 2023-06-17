@@ -21,42 +21,44 @@
 			justify-content: space-evenly;
 		}
 	}
-	.services__menu-item {
-		display: flex;
-		gap: 10px;
-		align-items: center;
-		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
-		border-radius: 8px;
-		padding: 15px;
-		margin-left: vw(30);
-		max-width: vw(716);
-		margin-bottom: vh(15);
-		@media screen and (max-width: 1169px){
-			max-width: none;
-			height: auto;
-			margin: 10px;
+	.services__menu {
+		&-item {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+			border-radius: 8px;
+			padding: 15px;
+			margin-left: vw(30);
+			max-width: vw(716);
+			margin-bottom: vh(15);
+			@media screen and (max-width: 1169px){
+				max-width: none;
+				height: auto;
+				margin: 10px;
+			}
 		}
-	}
-	.services__menu-block {
-		padding-left: vw(15);
-	}
-	.services__menu-bg {
-		position: absolute;
-		right: 0;
-		top: -150px;
-		z-index: -1;
-		@media screen and (max-width: 1169px){
-			display: none;
+		&-block {
+			padding-left: vw(15);
 		}
-	}
-	.services__menu-car {
-		@media screen and (max-width: 1696px){
-			padding-top: vh(35);
+		&-bg {
+			position: absolute;
+			right: 0;
+			top: -150px;
+			z-index: -1;
+			@media screen and (max-width: 1169px){
+				display: none;
+			}
 		}
-		@media screen and (max-width: 1696px){
-			width: vw(1080);
-			height: auto;
-			padding-top: 105px;
+		&-car {
+			@media screen and (max-width: 1696px){
+				padding-top: vh(35);
+			}
+			@media screen and (max-width: 1696px){
+				width: vw(1080);
+				height: auto;
+				padding-top: 105px;
+			}
 		}
 	}
 }
