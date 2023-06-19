@@ -8,6 +8,10 @@
 		gap: vw(10);
 		margin-bottom: vh(25);
 	}
+	@media screen and (max-width: 646px) {
+		flex-wrap: wrap;
+		gap: vh(15);
+	}
 	.price {
 		max-width: vw(319);
 		min-height: 419px;

@@ -33,6 +33,9 @@
 			display: flex;
 			flex-direction: column;
 			gap: 15px;
+			@media screen and (max-width: 646px){
+				max-width: 100%;
+			}
 		}
 		.step__info-subtitle {
 			color: white;
@@ -40,6 +43,11 @@
 			border-radius: 4px;
 			padding: 0px 12px;
 			max-width: 81px;
+		}
+		.step__img-wrap {
+			@media screen and (max-width: 646px){
+				display: none;
+			}
 		}
 	}
 }

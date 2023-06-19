@@ -8,6 +8,10 @@
 		bottom: 0px;
 		left: auto;
 		right: auto;
+		@media screen and (max-width: 646px) {
+			padding-top: vh(10);
+			max-width: 100%;
+		}
 	}
 	.blog__list {
 		max-width: 915px;
@@ -32,6 +36,9 @@
 		&-item:nth-child(2),
 		&-item:nth-child(3){
 			width: calc(50% - 10px);
+			@media screen and (max-width: 646px) {
+				width: 100%;
+			}
 		}
 		&-item:nth-child(4){
 			width: 100%;
@@ -39,6 +46,9 @@
 		&-item:nth-child(5),
 		&-item:nth-child(6){
 			width: calc(50% - 10px);
+			@media screen and (max-width: 646px) {
+				width: 100%;
+			}
 		}
 		&-img {
 			border-radius: 4px;
