@@ -53,6 +53,8 @@
 		}
 	}
 	.title__btns {
+		display: flex;
+		gap: 15px;
 		@media screen and (max-width: 880px){
 			justify-content: center;
 		}

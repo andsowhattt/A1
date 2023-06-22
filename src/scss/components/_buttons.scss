@@ -1,6 +1,4 @@
-.btn__wrap {
-	display: flex;
-	gap: 15px;
+
 	.btn {
 		display: flex;
 		justify-content: center;
@@ -19,14 +17,6 @@
 			box-shadow: 0 0 35px var(--accent);
 			transform: scale(1.1);
 		}
-		&--small {
-			width: 20px;
-			height: 20px;
-		}
-		&--big {
-			width: 24px;
-			height: 24px;
-		}
 		&--margin {
 			margin-top: vh(15);
 			margin-bottom: vh(40);
@@ -36,11 +26,19 @@
 			margin-top: vh(15);
 			margin-bottom: vh(40);
 		}
-		.btn__prepend-icon {
+		&__icon--small {
+			width: 20px;
+			height: 20px;
+		}
+		&__icon--big {
+			width: 24px;
+			height: 24px;
+		}
+		&__icon--prepend {
 			margin-right: 5px;
 		}
-		.btn__append-icon {
+		&__icon--append {
 			margin-left: 5px;
 		}
 	}
-}
+

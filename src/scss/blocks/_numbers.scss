@@ -1,5 +1,5 @@
 .numbers {
-	.numbers__title-wrap {
+	&__title-wrap {
 		text-align: center;
 		margin-top: vh(60);
 		margin-bottom: vh(120);
@@ -8,10 +8,10 @@
 			margin-top: vh(25);
 	}
 	}
-	.numbers__title {
+	&__title {
 		padding-bottom: vh(10);
 	}
-	.numbers__info-wrap {
+	&__info-wrap {
 		display: flex;
 		gap: vw(221);
 		@media screen and (max-width: 1169px) {
@@ -21,7 +21,7 @@
 			width: 100%;
 	}
 	}
-	.numbers__info {
+	&__info {
 		max-width: vw(724);
 		padding-bottom: vh(212);
 		position: relative;
@@ -29,15 +29,19 @@
 			padding-bottom: vh(20);
 			max-width: none;
 			margin: 10px;
-	}
-	}
-	.numbers__info-title {
-		padding-bottom: vh(15);
-		@media screen and (max-width: 1169px) {
-			text-align: center;
 		}
-	}
-	.numbers__info-text {
-		padding-bottom: vh(15);
+		&-btn {
+			display: flex;
+			gap: 15px;
+		}
+		&-title {
+			padding-bottom: vh(15);
+			@media screen and (max-width: 1169px) {
+				text-align: center;
+			}
+		}
+		&-text {
+			padding-bottom: vh(15);
+		}
 	}
 }

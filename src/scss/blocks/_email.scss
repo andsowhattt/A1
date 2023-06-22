@@ -11,4 +11,8 @@
 	&__security {
 		margin-top: vh(10);
 	}
+	&__btn {
+		display: flex;
+		gap: 15px;
+	}
 }

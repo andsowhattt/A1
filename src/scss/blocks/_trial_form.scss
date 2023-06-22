@@ -19,4 +19,8 @@
 		gap: vh(15);
 		padding-bottom: vh(15);
 	}
+	&-btn{
+		display: flex;
+		gap: 15px;
+	}
 }

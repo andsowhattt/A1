@@ -2,7 +2,6 @@ export const formElement = document.getElementById("trial__form-block");
 
 export const formSubmitHandler = function (event) {
 	event.preventDefault();
-	const formElement = document.getElementById("trial__form-block");
 	const name = document.getElementById("trial__form-name").value;
 	const email = document.getElementById("trial__form-email").value;
 	const phone = document.getElementById("trial__form-phone").value;
@@ -35,17 +34,14 @@ export const formSubmitHandler = function (event) {
 			}
 		})
 		.then(function (data) {
-			
 			console.log("Server response:", data);
 			alert(JSON.stringify(formData));
 
-			
 			formElement.reset();
 
 			window.location.href = "thx.html";
 		})
 		.catch(function (error) {
-			
 			console.error("Error:", error);
 		});
 };

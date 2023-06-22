@@ -60,6 +60,10 @@
 		&-text {
 			margin-bottom: vh(15);
 		}
+		&-btn {
+			display: flex;
+			gap: 15px;
+		}
 	}
 	.blog__pagination {
 		display: flex;

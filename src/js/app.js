@@ -1,27 +1,19 @@
-// burger
 import { initializeBurgerMenu } from './modules/burger.js';
+import './modules/login.js';
+import { setupAdvantages } from './modules/advantages.js';
+import { setupCounter } from './modules/counter.js';
+import './modules/slider.js';
+import { sendMessage } from './modules/email.js';
+import { formElement, formSubmitHandler } from './modules/trial.js';
 
 document.addEventListener('DOMContentLoaded', function () {
 	initializeBurgerMenu();
 });
 
-// login
-import './modules/login.js';
-
-
-// advantages
-import { setupAdvantages } from './modules/advantages.js';
 setupAdvantages();
 
-// counter
-import { setupCounter } from './modules/counter.js';
 setupCounter();
 
-// slider
-import './modules/slider.js';
-
-// email
-import { sendMessage } from './modules/email.js';
 const form = document.getElementById('email__sms-form');
 
 if (form) {
@@ -32,8 +24,6 @@ if (form) {
 	});
 }
 
-// freeform
-import { formElement, formSubmitHandler } from './modules/trial.js';
 if (formElement) {
 	formElement.addEventListener("submit", formSubmitHandler);
 }
