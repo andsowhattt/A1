@@ -1,13 +1,13 @@
 .partners {
 	text-align: center;
 	margin-bottom: vh(40);
-	.partners__title {
+	&__title {
 		padding-bottom: vh(10);
 	}
-	.partners__subtitle {
+	&__subtitle {
 		padding-bottom: vh(40);
 	}
-	.partners__btn-wrap {
+	&__btn-wrap {
 		display: flex;
 		gap: vw(30);
 		justify-content: center;
@@ -18,7 +18,7 @@
 			grid-template-rows: repeat(2, 1fr);
 		}
 	}
-	.partners__btn {
+	&__btn {
 		padding: 10px 50px;
 		border: none;
 		background-color: white;

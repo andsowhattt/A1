@@ -1,4 +1,4 @@
-.price__wrap {
+.price {
 	display: flex;
 	justify-content: center;
 	gap: vw(30);
@@ -12,7 +12,7 @@
 		flex-wrap: wrap;
 		gap: vh(15);
 	}
-	.price {
+	&__range {
 		max-width: vw(319);
 		min-height: 419px;
 		display: flex;
@@ -21,59 +21,61 @@
 			max-width: none;
 		}
 	}
-	.price__title-wrap {
-		background-color: #4C97DD;
-		border-radius: 8px 8px 0px 0px;
-		text-align: center;
-		padding-top: vh(12);
-		padding-bottom: vh(12);
-		color: white;
-	}
-	.price__description {
-		background-color: #B6D2ED;
-		border-bottom: 1px solid #1968B3;
-		text-align: center;
-		padding-left: vh(16);
-		padding-right: vh(16);
-		padding-top: vh(12);
-		padding-bottom: vh(12);
-		color: #465577;
-	}
-	.price__list {
-		background-color: #B6D2ED;
-		align-items: center;
-		padding-top: vh(12);
-		padding-bottom: vh(12);
-		color: #465577;
-		&-service {
-			list-style: none; 
-			position: relative; 
-			padding-left: 20px; 
+	.range {
+		&__title-wrap {
+			background-color: #4C97DD;
+			border-radius: 8px 8px 0px 0px;
+			text-align: center;
+			padding-top: vh(12);
+			padding-bottom: vh(12);
+			color: white;
 		}
-		&-service::before {
-			content: ""; 
-			position: absolute; 
-			left: 10px; 
-			top: 50%; 
-			transform: translate(-50%, -50%); 
-			width: 6px; 
-			height: 6px; 
-			background-color: #1968B3; 
-			border-radius: 50%; 
+		&__description {
+			background-color: #B6D2ED;
+			border-bottom: 1px solid #1968B3;
+			text-align: center;
+			padding-left: vh(16);
+			padding-right: vh(16);
+			padding-top: vh(12);
+			padding-bottom: vh(12);
+			color: #465577;
 		}
-	}
-	.price__btn {
-		background-color: #1968B3;
-		width: vw(319);
-		border-radius: 0px 0px 8px 8px;
-		color: white;
-		border: none;
-		cursor: pointer;
-		padding-top: vh(16);
-		padding-bottom: vh(16);
-		text-align: center;
-		@media screen and (max-width: 880px) {
-			width: 100%;
+		&__list {
+			background-color: #B6D2ED;
+			align-items: center;
+			padding-top: vh(12);
+			padding-bottom: vh(12);
+			color: #465577;
+			&-service {
+				list-style: none; 
+				position: relative; 
+				padding-left: 20px; 
+			}
+			&-service::before {
+				content: ""; 
+				position: absolute; 
+				left: 10px; 
+				top: 50%; 
+				transform: translate(-50%, -50%); 
+				width: 6px; 
+				height: 6px; 
+				background-color: #1968B3; 
+				border-radius: 50%; 
+			}
+		}
+		&__btn {
+			background-color: #1968B3;
+			width: vw(319);
+			border-radius: 0px 0px 8px 8px;
+			color: white;
+			border: none;
+			cursor: pointer;
+			padding-top: vh(16);
+			padding-bottom: vh(16);
+			text-align: center;
+			@media screen and (max-width: 880px) {
+				width: 100%;
+			}
 		}
 	}
 }

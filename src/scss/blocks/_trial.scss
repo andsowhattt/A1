@@ -2,7 +2,7 @@
 	@media (max-width: 880px) {
 		margin: 10px;
 	}
-	.trial__title {
+	&__title {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -26,6 +26,35 @@
 		}
 		&-text {
 			padding-bottom: vh(15);
+		}
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: vh(35);
+		margin-top: vh(25);
+		@media (max-width: 880px) {
+			gap: vh(15);
+			margin: 10px;
+		}
+		&-title {
+			@media (max-width: 880px) {
+				text-align: center;
+			}
+		}
+		&-input {
+			display: flex;
+			flex-direction: column;
+			gap: vh(15);
+			padding-bottom: vh(15);
+		}
+		&-btn{
+			display: flex;
+			gap: 15px;
+		}
+		&-text {
+			margin-bottom: 10px;
 		}
 	}
 }

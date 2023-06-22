@@ -5,7 +5,7 @@
 	@media screen and (max-width: 646px){
 		flex-wrap: wrap;
 	}
-	.title__img {
+	&__img {
 		width: 1080px;
 			height: 1080px;
 		@media screen and (max-width: 1553px){
@@ -25,7 +25,7 @@
 				height: auto;
 			}
 	}
-	.title__text {
+	&__text {
 		margin-right: 10px;
 		padding-top: vh(213);
 		max-width: vw(701);
@@ -37,13 +37,13 @@
 		text-align: center;
 		}
 	}
-	.title__title {
+	&__title {
 		padding-bottom: vh(12);
 	}
-	.title__subtitle {
+	&__subtitle {
 		padding-bottom: vh(21);
 	}
-	.title__btn {
+	&__btn {
 		@media screen and (max-width: 1553px){
 			margin-bottom: vh(50);
 		}
@@ -52,14 +52,14 @@
 			margin-bottom: vh(10);
 		}
 	}
-	.title__btns {
+	&__btns {
 		display: flex;
 		gap: 15px;
 		@media screen and (max-width: 880px){
 			justify-content: center;
 		}
 	}
-	.title__btn-free {
+	&__btn-free {
 		position: absolute;
 		right: 50px;
 		bottom: 210px;

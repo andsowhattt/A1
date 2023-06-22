@@ -1,5 +1,5 @@
 .services {
-	.services__title-wrap {
+	&__title-wrap {
 		text-align: center;
 		padding-top: vh(60);
 		padding-bottom: vh(62);
@@ -10,10 +10,10 @@
 			padding-bottom: vh(20);
 		}
 	}
-	.services__title {
+	&__title {
 		margin-bottom: vh(10);
 	}
-	.services__menu-wrap {
+	&__menu-wrap {
 		display: flex;
 		justify-content: space-between;
 		position: relative;
@@ -21,7 +21,7 @@
 			justify-content: space-evenly;
 		}
 	}
-	.services__menu {
+	&__menu {
 		&-item {
 			display: flex;
 			gap: 10px;

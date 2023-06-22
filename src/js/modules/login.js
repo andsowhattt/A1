@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
 	const loginForm = document.querySelector('.login__form-container');
 	const loginOverlay = document.querySelector('.login__overlay');
-	const [usernameInput, passwordInput] = document.querySelectorAll('#username, #password');
+	const usernameInput = document.querySelector('.name--input-js');
+	const passwordInput = document.querySelector('.pass--input-js');
 	const loginButtons = document.querySelectorAll('.open--login-js');
 
 	function openModal() {

@@ -1,6 +1,6 @@
 .advantages {
 	margin-top: 15px;
-	.advantages__title-wrap {
+	&__title-wrap {
 		margin: 0 auto;
 		text-align: center;
 		@media screen and (max-width: 1553px){
@@ -10,7 +10,7 @@
 			margin: 10px;
 		}
 	}
-	.advantages__block {
+	&__block {
 		margin-top: vh(60);
 		display: grid;
 		grid-template-columns: 42% 56%;
@@ -37,7 +37,6 @@
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: repeat(2, 1fr);
-			// position: relative; 
 			@media screen and (max-width: 1696px) {
 				grid-template-columns: 1fr 1fr; 
 				grid-template-rows: repeat(3, 1fr);
@@ -75,10 +74,6 @@
 			box-shadow: 0 0 35px var(--accent);
 			z-index: 1;
 		}
-		// &-item:before {
-		// 	content: "";
-		// 	position: absolute;
-		// }
 		&-logo {
 			max-width: 100%;
 			height: auto;

@@ -13,13 +13,13 @@
 	@media (max-width: 880px) {
 		margin: 10px;
 	}
-	.contacts__map iframe {
+	&__map iframe {
 		@media (max-width: 880px) {
 			width: 300px;
 			height: 200px;
 		}
 	}
-	.contacts__info {
+	&__info {
 		&-title {
 			color: black;
 			margin-bottom: vh(30);

@@ -3,11 +3,11 @@
 	@media screen and (max-width: 1696px) {
 		margin-top: vh(52);
 	}
-	.cars__title-wrap {
+	&__title-wrap {
 		text-align: center;
 		padding-bottom: vh(28);
 	}
-	.cars__model-wrap {
+	&__model-wrap {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(2, 1fr);
@@ -22,7 +22,7 @@
 			
 		}
 	}
-	.cars__model {
+	&__model {
 		min-width: vw(620);
 		min-height: vh(329);
 		border: 2px solid #DFDFDF;
