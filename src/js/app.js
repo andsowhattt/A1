@@ -1,5 +1,5 @@
-import { initializeBurgerMenu } from './modules/burger.js';
 import './modules/login.js';
+import { initializeBurgerMenu } from './modules/burger.js';
 import { setupAdvantages } from './modules/advantages.js';
 import { setupCounter } from './modules/counter.js';
 import './modules/slider.js';

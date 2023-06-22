@@ -1,5 +1,5 @@
-.blog__wrap {
-	.blog__title-wrap {
+.blog {
+	&__title-wrap {
 		margin: 0 auto;
 		text-align: center;
 		max-width: vw(974);
@@ -13,7 +13,7 @@
 			max-width: 100%;
 		}
 	}
-	.blog__list {
+	&__list {
 		max-width: 915px;
 		display: flex;
 		flex-wrap: wrap;
@@ -65,14 +65,14 @@
 			gap: 15px;
 		}
 	}
-	.blog__pagination {
+	&__pagination {
 		display: flex;
 		justify-content: center;
 		margin-top: vh(20);
 		margin-bottom: vh(20);
 		align-items: center;
 	}
-	.blog__pagination a {
+	&__pagination a {
 		display: inline-block;
 		padding: 5px 10px;
 		background-color: #eee;
@@ -81,13 +81,13 @@
 		margin: 0 5px;
 		border-radius: 4px;
 	}
-	.blog__pagination a:hover {
+	&__pagination a:hover {
 		box-shadow: 0 0 35px var(--accent);
 	}
-	.blog__pagination a:first-child, .blog__pagination a:last-child {
+	&__pagination a:first-child, &__pagination a:last-child {
 		background-color: inherit;
 	}
-	.blog__pagination a.active {
+	&__pagination a.active {
 		background-color: var(--accent);
 		color: #fff;
 	}
