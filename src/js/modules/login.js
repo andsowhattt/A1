@@ -15,14 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		loginOverlay.style.display = 'none';
 	}
 
-	document.addEventListener('click', function (event) {
-		if (event.target.classList.contains('open--login-js')) {
-			openModal();
-		} else if (!loginForm.contains(event.target) && !event.target.classList.contains('open--login-js')) {
-			closeModal();
-		}
-	});
-
 	function login(event) {
 		event.preventDefault();
 
@@ -35,13 +27,20 @@ document.addEventListener('DOMContentLoaded', function () {
 		} else {
 			alert('Incorrect username or password.');
 		}
-
 		event.target.reset();
 	}
 
-	for (const button of loginButtons) {
-		button.addEventListener('click', openModal);
-	}
+	loginButtons.forEach(function (button) {
+		button.addEventListener('click', function () {
+			openModal();
+		});
+	});
+
+	loginOverlay.addEventListener('click', function (event) {
+		if (event.target === loginOverlay) {
+			closeModal();
+		}
+	});
 
 	loginForm.addEventListener('submit', login);
 });
