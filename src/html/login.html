@@ -1,7 +1,11 @@
 <div class="login">
 	<div class="login__overlay"></div>
 	<div class="login__form-container">
-		<img src="../img/logo/logo.png" alt="logo" class="login__form-image">
+		<div class="login__form-logo">
+			<svg class="login__form-image">
+				<use xlink:href="/img/icons/icons.svg#logo"></use>
+			</svg>
+		</div>
 		<form class="login__form">
 			<label class="login__label" for="username">Username or email address</label>
 			<input class="login__input name--input-js" type="text" id="username" name="username" placeholder="username or email" required>

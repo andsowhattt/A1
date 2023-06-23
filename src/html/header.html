@@ -1,13 +1,11 @@
 <header class="header">
 	<div class="container">
 		<div class="header__wrap">
-
-			<div class="header__logo">
-				<a class="header__logo-link" href="main.html">
-					<img class="header__logo-img" src="../img/logo/logo.png" alt="logo">
-				</a>
-			</div>
-
+			<a class="header__logo" href="main.html">
+				<svg class="header__logo-img">
+					<use xlink:href="/img/icons/icons.svg#logo"></use>
+				</svg>
+			</a>
 			<div class="header__menu-wrap">
 				<nav class="header__menu">
 					<ul class="header__menu-list">
@@ -17,17 +15,13 @@
 						<li class="header__menu-item"><a class="header__menu-link" href="contacts.html">Contacts</a></li>
 					</ul>
 				</nav>
-
 				<svg class="header__menu-toggle">
 					<use xlink:href="/img/icons/icons.svg#menu"></use>
 				</svg>
-
 				<svg class="header__menu-close">
 					<use xlink:href="/img/icons/icons.svg#close"></use>
 				</svg>
-
 				<div class="header__menu-overlay"></div>
-
 				<div class="header__menu-bar bar">
 					<div class="bar__lang">
 						<select class="bar__lang-options">
@@ -36,11 +30,9 @@
 							<option class="bar__lang-option" value="/sv/">SWEDISH</option>
 						</select>
 					</div>
-
 					<div class="bar__phone">
 						<a href="tel:+13479037485" class="bar__phone-link">+1 347 903 74 85</a>
 					</div>
-
 					<div class="bar__btns">
 						<button class="btn open--login-js" type="button" name="button">
 							<svg class="btn__icon btn__icon--small btn__icon--prepend">

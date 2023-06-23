@@ -1,8 +1,8 @@
 .header {
-	background-color: white;
+	background-color: #1b2936;
 	color: var(--accent);
-	padding-top: vh(13);
-	padding-bottom: vh(13);
+	padding-top: 5px;
+	padding-bottom: 5px;
 	.header__wrap {
 		display: flex;
 		justify-content: space-between;
@@ -13,14 +13,15 @@
 			cursor: pointer;
 		}
 		&-img {
-			object-fit: cover;
+			width: 180px;
+			height: 80px;
 			@media screen and (max-width: 1169px){
-				width: vw(340);
-				height: auto;
+				width: 180px;
+				height: 60px;
 			}
 			@media screen and (max-width: 880px){
-				width: 150px;
-				height: auto;
+				width: 140px;
+				height: 40px;
 			}
 		}
 	}
@@ -90,11 +91,12 @@
 					display: none;
 				}
 				&-options {
+					border-radius: 4px;
 					background-color: inherit;
 					border: none;
-					color: var(--accent);
+					color: white;
 					text-align: center;
-					background-color: white;
+					background-color: var(--accent);
 				}
 			}
 			.bar__phone {
