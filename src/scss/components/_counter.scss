@@ -2,9 +2,10 @@
 	.counter__wrap {
 		display: flex;
 		min-width: vw(720);
-		justify-content: space-between;
+		gap: 65px;
 		@media screen and (max-width: 1169px) {
 			flex-direction: column;
+			gap: 0px;
 	}
 	}
 	.counter__plus {
