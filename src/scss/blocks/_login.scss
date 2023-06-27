@@ -30,17 +30,14 @@
 			cursor: not-allowed;
 		}
 	}
-	
 	&__form-image {
 		width: 180px;
-		height: 80px;
-		
+		height: 80px;	
 	}
 	&__form-logo {
 		display: flex;
 		justify-content: center;
 	}
-	
 	&__form {
 		position: relative;
 		width: 400px;
@@ -48,12 +45,10 @@
 		background-color: #fff;
 		padding: 20px;
 	}
-	
 	&__label {
 		display: block;
 		margin-top: 10px;
 	}
-	
 	&__input[type="text"],
 	&__input[type="password"] {
 		width: 100%;
@@ -61,7 +56,6 @@
 		margin-top: 5px;
 		margin-bottom: 10px;
 	}
-	
 	&__submit {
 		width: 100%;
 		padding: 10px;
@@ -76,18 +70,15 @@
 			cursor: pointer;
 		}
 	}
-	
 	&__password-link {
 		display: block;
 		margin-bottom: 10px;
 		text-align: right;
 		color: var(--accent);
 	}
-	
 	&__sign-up {
 		color: black;
 	}
-	
 	&__sign-btn {
 		color: var(--accent);
 	}
